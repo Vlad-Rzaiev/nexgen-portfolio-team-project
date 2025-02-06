@@ -11,7 +11,7 @@
 
 @media screen and (min-resolution: 192dpi) {
   .covers-marquee {
-    background-image: url(/src/img/covers/covers-bg@2x.png);
+    background-image: url(/img/covers/covers-bg@2x.png);
   }
 }
 
