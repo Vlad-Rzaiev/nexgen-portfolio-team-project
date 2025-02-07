@@ -1,4 +1,77 @@
-h1,
-h2 {
-  color: brown;
+/* Benefits section mobile */
+
+.cards-benefits {
+  display: flex;
+  flex-direction: column;
+  margin-top: 32px;
+  gap: 16px;
+}
+
+.item-benefits {
+  padding: 24px;
+  border-radius: 20px;
+  background: #242527;
+}
+
+.icon-li-link {
+  padding: 12px;
+  border-radius: 10px;
+  background-color: #c6e327;
+}
+
+.icon-li {
+}
+
+.title-benefits {
+  margin-top: 64px;
+  font-size: 20px;
+}
+
+.text-benefits {
+  margin-top: 8px;
+  font-weight: 500;
+  /* line-height: 24px; */
+  line-height: 1.5;
+  letter-spacing: -0.02em;
+  color: rgba(250, 250, 250, 0.6);
+}
+
+.btn-order-the-project {
+  margin-top: 32px;
+  padding: 18px 36px;
+  border-radius: 60px;
+  border: solid 1px rgba(250, 250, 250, 0.2);
+  background-color: inherit;
+}
+
+.btn-text-order {
+  color: #fafafa;
+}
+
+/* Benefits section tablet */
+
+@media only screen and (min-width: 768px) {
+  .cards-benefits {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .item-benefits {
+    width: calc((100% - 16px) / 2);
+  }
+
+  .btn-order-the-project {
+    margin-top: 64px;
+  }
+}
+
+/* Benefits section desktop */
+@media only screen and (min-width: 1440px) {
+  .cards-benefits {
+    margin-top: -24px;
+    margin-left: 412px;
+  }
+
+  .btn-order-the-project {
+    margin-left: 412px;
+  }
 }
