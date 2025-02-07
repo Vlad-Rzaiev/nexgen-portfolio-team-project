@@ -5,12 +5,12 @@
   overflow: hidden;
   background-repeat: no-repeat;
   background-position: center;
+  background-size: 375px 812px;
   width: 100%;
   height: 812px;
 }
 
 .hero-title {
-  font-family: 'Inter Tight', sans-serif;
   font-size: 50px;
   font-weight: 500;
   line-height: 1;
@@ -29,14 +29,14 @@
   }
 }
 
-.social-links {
+.hero-social-links {
   display: flex;
   list-style: none;
   width: 342px;
   margin-left: auto;
 }
 
-.social-links-list {
+.hero-social-links-list {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -44,7 +44,7 @@
   gap: 4px;
 }
 
-.social-links-item {
+.hero-social-links-item {
   display: inline;
   display: flex;
   align-items: center;
@@ -57,7 +57,7 @@
   transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.social-links-icon {
+.hero-social-links-icon {
   color: #fafafa;
   font-size: 14px;
   letter-spacing: -0.02em;
@@ -65,11 +65,11 @@
   font-weight: 500;
 }
 
-.social-links-item:hover {
+.hero-social-links-item:hover {
   border: 2px solid #fafafa;
 }
 
-.social-email {
+.hero-social-email {
   width: 178px;
 }
 
@@ -80,6 +80,7 @@
     background-image: url(/img/hero/hero_tablet@1.png);
     overflow: hidden;
     background-repeat: no-repeat;
+    background-size: 768px 1024px;
     height: 1024px;
   }
 
@@ -101,16 +102,16 @@
     padding-left: 32px;
   }
 
-  .social-links {
+  .hero-social-links {
     width: 473px;
   }
 
-  .social-links-item {
+  .hero-social-links-item {
     width: 55px;
     height: 55px;
   }
 
-  .social-email {
+  .hero-social-email {
     width: 223px;
   }
 }
@@ -122,6 +123,7 @@
     background-image: url(/img/hero/hero@1.png);
     overflow: hidden;
     background-repeat: no-repeat;
+    background-size: 1440px 900px;
     height: 900px;
   }
 
