@@ -210,5 +210,14 @@
     height: 150px;
     margin-left: 32px;
   }
-
+.ft-email {
+width: 239px;
+  height: 55px;
+  padding: 18px 32px;
+}
+.ft-phone {
+  width: 171px;
+    height: 55px;
+    padding: 18px 32px;
+}
 }
