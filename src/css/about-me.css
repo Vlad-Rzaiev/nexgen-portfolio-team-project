@@ -324,9 +324,10 @@
 
 /* SWIPER STYLES */
 
-.skills-swip-wrapper.swiper {
+.skills-swip-wrapper.swiper-one {
   display: flex;
   width: 260px;
+  overflow: hidden;
   margin-left: 0;
   margin-right: 0;
 }
@@ -337,15 +338,16 @@
 /* SWIPER TABLET STYLES */
 
 @media only screen and (min-width: 768px) {
-  .skills-swip-wrapper.swiper {
+  .skills-swip-wrapper.swiper-one {
     width: 600px;
+    overflow: hidden;
   }
 }
 
 /* SWIPER DESKTOP STYLES */
 
 @media only screen and (min-width: 1440px) {
-  .skills-swip-wrapper.swiper {
+  .skills-swip-wrapper.swiper-one {
     width: 1200px;
     overflow: hidden;
   }

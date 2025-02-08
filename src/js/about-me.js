@@ -11,8 +11,9 @@ new Accordion(".accordion-container", {
     openOnInit: [0],
 });
 
- const swiper = new Swiper('.swiper', {
-    modules: [Navigation, Keyboard],
+ const swiper = new Swiper('.swiper-one', {
+   modules: [Navigation, Keyboard],
+   containerModifierClass: 'swiper-one',
    slidesPerView: 2,
     allowTouchMove: true,
     loop: true,
@@ -25,7 +26,10 @@ new Accordion(".accordion-container", {
     navigation: {
       nextEl: '.swiper-button-next',
     },
-    breakpoints: {
+   breakpoints: {
+      320: {
+      slidesPerView: 2
+    },
     768: {
       slidesPerView: 3
     },
