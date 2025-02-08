@@ -1,5 +1,162 @@
-<section class="sections-paddings">
+<section class="sections-paddings" id="about-me">
   <div class="container">
-    <h2 class="section-title">about me</h2>
+    <h2 class="section-title visually-hidden">about me</h2>
+
+    <!-- DESCRIPTION -->
+    <div class="description-wrapper">
+      <div class="about-me-description-wrapper">
+        <p class="about-me-description">
+          I work with people all over the world to create impressive and
+          <span class="about-me-description-green">functional</span>
+          <span class="about-me-description-gray">websites</span> that reflect
+          each client's unique personality.
+        </p>
+      </div>
+      <picture>
+        <source
+          srcset="
+            ./img/about-me/aboutme_desktop@1.png 1x,
+            ./img/about-me/aboutme_desktop@2.png 2x
+          "
+          media="(min-width: 1440px)"
+        />
+        <source
+          srcset="
+            ./img/about-me/aboutme_tablet@1.png 1x,
+            ./img/about-me/aboutme_tablet@2.png 2x
+          "
+          media="(min-width: 768px)"
+        />
+        <img
+          class="about-me-image"
+          src="./img/about-me/aboutme_mobile@1.png"
+          srcset="
+            ./img/about-me/aboutme_mobile@1.png 1x,
+            ./img/about-me/aboutme_mobile@2.png 2x
+          "
+          alt="me-photo"
+          width="343"
+          height="500"
+        />
+      </picture>
+    </div>
+
+    <!-- ABOUT-ME-LIST -->
+    <ul class="about-me-list accordion-container">
+      <!-- ABOUT-ME BLOCK -->
+      <li class="about-me-item ac">
+        <div class="about-me-ac-wrapper ac-header">
+          <h3 class="about-me-subtitle">ABOUT ME</h3>
+          <button class="about-me-ac-btn ac-trigger" type="button"></button>
+          <div class="about-me-icon-wrapper">
+            <svg class="about-me-ac-icon" width="18" height="18">
+              <use href="./img/sprite.svg#icon-arrow-down"></use>
+            </svg>
+          </div>
+        </div>
+        <div class="ac-panel">
+          <ul class="about-me-first-sublist">
+            <li class="about-me-subitem">
+              <p class="about-me-text">
+                I am Lloyd Jefferson, a talented programmer with extensive
+                expertise in software development. I have an understanding of
+                different programming languages ​​and technologies, always ready
+                to improve my skills. I always follow the latest trends and look
+                for unconventional, creative solutions to problems. I have a
+                high level of analytical skills and am able to effectively solve
+                even the most difficult tasks encountered on the way.
+              </p>
+            </li>
+            <li class="about-me-subitem">
+              <p class="about-me-text">
+                Able to work both independently and in a team. I can effectively
+                cooperate with colleagues, exchanging ideas and finding optimal
+                solutions. Professional maturity allows you to calmly cope with
+                challenges and stressful situations, while maintaining a high
+                quality of work.I am always looking for opportunities for
+                self-improvement. I actively study new technologies and
+                practices to stay abreast of the latest innovations. I have a
+                strong understanding of various programming languages,
+                frameworks and architectural concepts that allow me to create
+                efficient and scalable software.
+              </p>
+            </li>
+          </ul>
+        </div>
+      </li>
+      <!-- ROLE BLOCK -->
+      <li class="about-me-item ac">
+        <div class="about-me-ac-wrapper ac-header">
+          <h3 class="about-me-subtitle">ROLE</h3>
+          <button class="about-me-ac-btn ac-trigger" type="button"></button>
+          <div class="about-me-icon-wrapper">
+            <svg class="about-me-ac-icon" width="18" height="18">
+              <use href="./img/sprite.svg#icon-arrow-down"></use>
+            </svg>
+          </div>
+        </div>
+        <div class="ac-panel">
+          <ul class="about-me-sublist">
+            <li class="about-me-subitem">Frontend development</li>
+            <li class="about-me-subitem">HeadlessCMS, Wordpress</li>
+            <li class="about-me-subitem">Blender(enjoy)</li>
+          </ul>
+        </div>
+      </li>
+      <!-- EDUCATION BLOCK -->
+      <li class="about-me-item ac">
+        <div class="about-me-ac-wrapper ac-header">
+          <h3 class="about-me-subtitle">EDUCATION</h3>
+          <button class="about-me-ac-btn ac-trigger" type="button"></button>
+          <div class="about-me-icon-wrapper">
+            <svg class="about-me-ac-icon" width="18" height="18">
+              <use href="./img/sprite.svg#icon-arrow-down"></use>
+            </svg>
+          </div>
+        </div>
+        <div class="ac-panel">
+          <ul class="about-me-sublist">
+            <li class="about-me-subitem">
+              2018 - 2019 / Frontend Development Diploma, GoIT IT School, New
+              York
+            </li>
+            <li class="about-me-subitem">
+              2019 - 2020 / Advanced Web Development Certificate, GoIT IT
+              School, New York
+            </li>
+            <li class="about-me-subitem">
+              2020 - 2022 / Advanced Blender Animation Techniques, Udemy
+            </li>
+          </ul>
+        </div>
+      </li>
+    </ul>
+
+    <!-- SKILLS-LIST BLOCK -->
+    <div class="skills-wrapper">
+      <div class="skills-swip-wrapper swiper">
+        <ul class="skills-list swiper-wrapper">
+          <li class="skills-item swiper-slide">HTML/CSS</li>
+          <li class="skills-item swiper-slide">JavaScript</li>
+          <li class="skills-item swiper-slide">React</li>
+          <li class="skills-item swiper-slide">Node.js</li>
+          <li class="skills-item swiper-slide">React Native</li>
+          <li class="skills-item swiper-slide">Soft skills</li>
+          <li class="skills-item swiper-slide">HTML/CSS</li>
+          <li class="skills-item swiper-slide">JavaScript</li>
+          <li class="skills-item swiper-slide">React</li>
+          <li class="skills-item swiper-slide">Node.js</li>
+          <li class="skills-item swiper-slide">React Native</li>
+          <li class="skills-item swiper-slide">Soft skills</li>
+        </ul>
+      </div>
+      <div class="skills-swip-btn-wrapper swiper-button-next">
+        <button class="skills-swip-btn" type="button">
+          <svg class="skills-swip-icon" width="28" height="28">
+            <use href="./img/sprite.svg#icon-arrow-right"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
   </div>
 </section>
