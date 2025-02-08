@@ -31,6 +31,50 @@
   margin-bottom: 32px;
 }
 
+/* DESCRIPTION TABLET STYLES */
+
+@media only screen and (min-width: 768px) {
+  .about-me-description-wrapper {
+    width: 704px;
+    height: 700px;
+    padding: 64px;
+  }
+
+  .about-me-description {
+    font-size: 38px;
+    line-height: 1.05;
+  }
+
+  .about-me-image {
+    width: 704px;
+    height: 700px;
+    margin-bottom: 64px;
+  }
+}
+
+/* DESCRIPTION DESKTOP STYLES */
+
+@media only screen and (min-width: 1440px) {
+  .about-me-description-wrapper {
+    width: 680px;
+    height: 700px;
+    margin-bottom: 0;
+  }
+
+  .about-me-image {
+    width: 680px;
+    height: 700px;
+    margin-bottom: 0;
+  }
+
+  .description-wrapper {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    margin-bottom: 96px;
+  }
+}
+
 /* ABOUT-ME-LIST STYLES */
 .about-me-list {
   display: flex;
@@ -69,13 +113,14 @@
   position: absolute;
   background-color: inherit;
   border: none;
+  z-index: 10;
 
   width: 100%;
   height: 100%;
   -webkit-tap-highlight-color: transparent;
 }
 
-.about-me-ac-btn:focus,
+/* .about-me-ac-btn:focus, */
 .about-me-ac-btn:active {
   outline: none;
   box-shadow: none;
@@ -120,6 +165,62 @@
   letter-spacing: -0.02em;
 }
 
+/* ABOUT-ME-LIST TABLET STYLES */
+
+@media only screen and (min-width: 768px) {
+  .about-me-list {
+    gap: 32px;
+    margin-bottom: 64px;
+  }
+
+  .about-me-subtitle {
+    margin-bottom: 16px;
+  }
+
+  .about-me-first-sublist {
+    gap: 16px;
+  }
+
+  .about-me-item {
+    padding-bottom: 32px;
+  }
+
+  .about-me-ac-wrapper {
+    width: 704px;
+    height: 40px;
+    margin-bottom: 8px;
+  }
+}
+
+/* ABOUT-ME-LIST DESKTOP STYLES */
+
+@media only screen and (min-width: 1440px) {
+  .about-me-list {
+    margin-bottom: 96px;
+  }
+
+  .about-me-subtitle {
+    margin-bottom: 16px;
+  }
+
+  .about-me-first-sublist {
+    max-width: 612px;
+    margin-left: 50%;
+    padding: 8px 0 32px 0;
+
+    gap: 32px;
+  }
+
+  .about-me-sublist {
+    margin-left: 50%;
+    padding: 8px 0 32px 0;
+  }
+
+  .about-me-ac-wrapper {
+    width: 1376px;
+    height: 40px;
+  }
+}
 /* ACOORDION STYLES  */
 
 .ac .ac-panel {
@@ -186,6 +287,41 @@
   opacity: 0.2;
 }
 
+/* SKILLS-LIST TABLET STYLES */
+
+@media only screen and (min-width: 768px) {
+  .skills-item.swiper-slide {
+    height: 200px;
+  }
+
+  .skills-item.swiper-slide {
+    font-size: 20px;
+  }
+
+  .skills-swip-btn-wrapper {
+    width: 104px;
+    height: 200px;
+  }
+
+  .skills-swip-icon {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+/* SKILLS-LIST DESKTOP STYLES */
+
+@media only screen and (min-width: 1440px) {
+  .skills-wrapper {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+
+  .skills-swip-btn-wrapper {
+    width: 112px;
+  }
+}
+
 /* SWIPER STYLES */
 
 .skills-swip-wrapper.swiper {
@@ -196,4 +332,21 @@
 }
 .swiper-slide-active {
   background-color: #c6e327;
+}
+
+/* SWIPER TABLET STYLES */
+
+@media only screen and (min-width: 768px) {
+  .skills-swip-wrapper.swiper {
+    width: 600px;
+  }
+}
+
+/* SWIPER DESKTOP STYLES */
+
+@media only screen and (min-width: 1440px) {
+  .skills-swip-wrapper.swiper {
+    width: 1200px;
+    overflow: hidden;
+  }
 }

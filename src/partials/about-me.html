@@ -1,28 +1,45 @@
-<section class="sections-paddings">
+<section class="sections-paddings" id="about-me">
   <div class="container">
     <h2 class="section-title visually-hidden">about me</h2>
 
     <!-- DESCRIPTION -->
-    <div class="about-me-description-wrapper">
-      <p class="about-me-description">
-        I work with people all over the world to create impressive and
-        <span class="about-me-description-green">functional</span>
-        <span class="about-me-description-gray">websites</span> that reflect
-        each client's unique personality.
-      </p>
+    <div class="description-wrapper">
+      <div class="about-me-description-wrapper">
+        <p class="about-me-description">
+          I work with people all over the world to create impressive and
+          <span class="about-me-description-green">functional</span>
+          <span class="about-me-description-gray">websites</span> that reflect
+          each client's unique personality.
+        </p>
+      </div>
+      <picture>
+        <source
+          srcset="
+            ./img/about-me/aboutme_desktop@1.png 1x,
+            ./img/about-me/aboutme_desktop@2.png 2x
+          "
+          media="(min-width: 1440px)"
+        />
+        <source
+          srcset="
+            ./img/about-me/aboutme_tablet@1.png 1x,
+            ./img/about-me/aboutme_tablet@2.png 2x
+          "
+          media="(min-width: 768px)"
+        />
+        <img
+          class="about-me-image"
+          src="./img/about-me/aboutme_mobile@1.png"
+          srcset="
+            ./img/about-me/aboutme_mobile@1.png 1x,
+            ./img/about-me/aboutme_mobile@2.png 2x
+          "
+          alt="me-photo"
+          width="343"
+          height="500"
+        />
+      </picture>
     </div>
-
-    <img
-      class="about-me-image"
-      src="./img/about-me/aboutme_mobile@1.png"
-      srcset="
-        ./img/about-me/aboutme_mobile@1.png 1x,
-        ./img/about-me/aboutme_mobile@2.png 2x
-      "
-      alt="me-photo"
-      width="343"
-      height="500"
-    />
 
     <!-- ABOUT-ME-LIST -->
     <ul class="about-me-list accordion-container">
@@ -119,6 +136,12 @@
     <div class="skills-wrapper">
       <div class="skills-swip-wrapper swiper">
         <ul class="skills-list swiper-wrapper">
+          <li class="skills-item swiper-slide">HTML/CSS</li>
+          <li class="skills-item swiper-slide">JavaScript</li>
+          <li class="skills-item swiper-slide">React</li>
+          <li class="skills-item swiper-slide">Node.js</li>
+          <li class="skills-item swiper-slide">React Native</li>
+          <li class="skills-item swiper-slide">Soft skills</li>
           <li class="skills-item swiper-slide">HTML/CSS</li>
           <li class="skills-item swiper-slide">JavaScript</li>
           <li class="skills-item swiper-slide">React</li>
