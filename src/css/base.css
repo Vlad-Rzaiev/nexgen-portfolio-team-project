@@ -15,6 +15,12 @@
   src: url('../fonts/inter-tight-v7-latin-600.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 
+@media (prefers-reduced-motion: no-preference) {
+  * {
+    scroll-behavior: smooth;
+  }
+}
+
 body {
   font-family: 'Inter Tight', sans-serif;
   background-color: #1c1d20;
