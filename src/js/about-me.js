@@ -4,11 +4,15 @@ import Swiper from 'swiper';
 import { Navigation, Keyboard  } from 'swiper/modules';
 import 'swiper/css';
 
-new Accordion(".accordion-container", {
-    duration: 800,   
-    showMultiple: true,   
-    collapse: true,
-    openOnInit: [0],
+new Accordion(".accordion-container-about-me", {
+  elementClass: "ac-about-me",
+  triggerClass: "ac-trigger-about-me",
+  panelClass: "ac-panel-about-me",
+  activeClass: "is-active-about-me",
+  duration: 800,   
+  showMultiple: true,   
+  collapse: true,
+  openOnInit: [0],
 });
 
  const swiper = new Swiper('.swiper-one', {

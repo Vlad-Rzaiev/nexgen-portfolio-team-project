@@ -120,7 +120,6 @@
   -webkit-tap-highlight-color: transparent;
 }
 
-/* .about-me-ac-btn:focus, */
 .about-me-ac-btn:active {
   outline: none;
   box-shadow: none;
@@ -223,21 +222,21 @@
 }
 /* ACOORDION STYLES  */
 
-.ac .ac-panel {
+.ac-about-me .ac-panel-about-me {
   overflow: hidden;
   transition-property: height, visibility;
   transition-timing-function: ease;
 }
 
-.ac.js-enabled .ac-panel {
+.ac-about-me.js-enabled .ac-panel-about-me {
   visibility: hidden;
 }
 
-.ac.is-active .ac-panel {
+.ac-about-me.is-active-about-me .ac-panel-about-me {
   visibility: visible;
 }
 
-.ac.is-active .about-me-ac-icon {
+.ac-about-me.is-active-about-me .about-me-ac-icon {
   transform: rotate(180deg);
 }
 
