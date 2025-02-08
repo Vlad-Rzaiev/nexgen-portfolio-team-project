@@ -17,7 +17,7 @@
     <script type="module" crossorigin src="/nexgen-portfolio-team-project/index.js"></script>
     <link rel="modulepreload" crossorigin href="/nexgen-portfolio-team-project/assets/vendor-AOaBI4Gk.js">
     <link rel="stylesheet" crossorigin href="/nexgen-portfolio-team-project/assets/vendor-DHBATib1.css">
-    <link rel="stylesheet" crossorigin href="/nexgen-portfolio-team-project/assets/index-COdnh4rK.css">
+    <link rel="stylesheet" crossorigin href="/nexgen-portfolio-team-project/assets/index-DzNrAR1c.css">
   </head>
   <body>
     <header class="header">
@@ -755,11 +755,55 @@
 
     </main>
 
-    <footer>
-  <div class="container">
-    <h2 class="section-title">footer Work together</h2>
+    <footer id="work-together">
+  <div class="footer-container">
+  <div class="left-section">
+    <div class="profile">
+    <h1 class="title-footer">
+      <svg alt="logo" class="logo-footer" /> Let's
+      <span class="work">work</span> together
+    </h1>
   </div>
+  <form class="form-inf">
+    <div class="form-row">
+    <input
+      class="input-form-email"
+      type="text"
+      name="user-email"
+      placeholder="clients@gmail.com"
+      pattern="^\w+(.\w+)?@[a-zA-Z_]+?.[a-zA-Z]{2,3}$"
+      required
+    />
+    <input class="form-input" name="user-comment" placeholder="comments">
+    </input>
+  </div>
+  <div class="right-section">
+    <button class="btn-footer" type="submit" id="openModal">Send</button>
+  </div>
+  <div class="form-contacts">
+    <ul class="footer-contacts-list">
+      <li class="footer-item">
+        <a class="footer-contacts-link ft-email" href="lloydjefferson@gmail.com"
+          >lloydjefferson@gmail.com</a
+        >
+        <a class="footer-contacts-link ft-phone" href="+380 11 1111 11 11"
+          >+380 11 1111 11 11</a
+        >
+      </li>
+    </ul>
+      </div>  </div>
+  </form>
+
+  </div>
+  
 </footer>
+<div id="modal" class="modal">
+  <div class="modal-content"> 
+    <span class="close-btn">&times;</span>
+    <h1>Thank you for your interest in cooperation!</h1>
+    <p>The manager will contact you shortly to discuss further details and opportunities for cooperation. Please stay in touch.</p>
+  </div>
+</div>
 
 
   </body>
