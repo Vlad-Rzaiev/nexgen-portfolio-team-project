@@ -104,7 +104,6 @@
   margin-top: 144px;
 }
 
-
 .btn-footer {
   border-radius: 100%;
   background-color: var(--button-text);
@@ -115,7 +114,6 @@
   font-size: 18px;
   cursor: pointer;
   align-items: center;
-
 }
 
 .btn-footer:hover {
@@ -127,7 +125,6 @@
 }
 
 @media screen and (min-width: 320px) {
-
   .footer-container {
     align-items: flex-start;
     padding: 96px 16px 32px;
@@ -210,14 +207,14 @@
     height: 150px;
     margin-left: 32px;
   }
-.ft-email {
-width: 239px;
-  height: 55px;
-  padding: 18px 32px;
-}
-.ft-phone {
-  width: 171px;
+  .ft-email {
+    width: 239px;
     height: 55px;
     padding: 18px 32px;
-}
+  }
+  .ft-phone {
+    width: 171px;
+    height: 55px;
+    padding: 18px 32px;
+  }
 }
