@@ -5,16 +5,16 @@
   border-radius: 24px;
   width: 343px;
   height: 500px;
-  padding: 32px 32px 0px 32px;
+  padding: 32px;
   margin-bottom: 16px;
 
-  background: #242527;
+  background-color: #242527;
 }
 
 .about-me-description {
   font-weight: 500;
   font-size: 24px;
-  line-height: 1.16667;
+  line-height: 1.17;
   letter-spacing: -0.03em;
   text-transform: uppercase;
   color: #fafafa;
@@ -29,6 +29,50 @@
 
 .about-me-image {
   margin-bottom: 32px;
+}
+
+/* DESCRIPTION TABLET STYLES */
+
+@media only screen and (min-width: 768px) {
+  .about-me-description-wrapper {
+    width: 704px;
+    height: 700px;
+    padding: 64px;
+  }
+
+  .about-me-description {
+    font-size: 38px;
+    line-height: 1.05;
+  }
+
+  .about-me-image {
+    width: 704px;
+    height: 700px;
+    margin-bottom: 64px;
+  }
+}
+
+/* DESCRIPTION DESKTOP STYLES */
+
+@media only screen and (min-width: 1440px) {
+  .about-me-description-wrapper {
+    width: 680px;
+    height: 700px;
+    margin-bottom: 0;
+  }
+
+  .about-me-image {
+    width: 680px;
+    height: 700px;
+    margin-bottom: 0;
+  }
+
+  .description-wrapper {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    margin-bottom: 96px;
+  }
 }
 
 /* ABOUT-ME-LIST STYLES */
@@ -48,6 +92,7 @@
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
+  position: relative;
 
   width: 343px;
   height: 36px;
@@ -64,8 +109,23 @@
   text-transform: uppercase;
   color: rgba(250, 250, 250, 0.4);
 }
-
 .about-me-ac-btn {
+  position: absolute;
+  background-color: inherit;
+  border: none;
+  z-index: 10;
+
+  width: 100%;
+  height: 100%;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.about-me-ac-btn:active {
+  outline: none;
+  box-shadow: none;
+}
+
+.about-me-icon-wrapper {
   display: flex;
   align-items: center;
   flex-direction: row;
@@ -104,23 +164,79 @@
   letter-spacing: -0.02em;
 }
 
+/* ABOUT-ME-LIST TABLET STYLES */
+
+@media only screen and (min-width: 768px) {
+  .about-me-list {
+    gap: 32px;
+    margin-bottom: 64px;
+  }
+
+  .about-me-subtitle {
+    margin-bottom: 16px;
+  }
+
+  .about-me-first-sublist {
+    gap: 16px;
+  }
+
+  .about-me-item {
+    padding-bottom: 32px;
+  }
+
+  .about-me-ac-wrapper {
+    width: 704px;
+    height: 40px;
+    margin-bottom: 8px;
+  }
+}
+
+/* ABOUT-ME-LIST DESKTOP STYLES */
+
+@media only screen and (min-width: 1440px) {
+  .about-me-list {
+    margin-bottom: 96px;
+  }
+
+  .about-me-subtitle {
+    margin-bottom: 16px;
+  }
+
+  .about-me-first-sublist {
+    max-width: 612px;
+    margin-left: 50%;
+    padding: 8px 0 32px 0;
+
+    gap: 32px;
+  }
+
+  .about-me-sublist {
+    margin-left: 50%;
+    padding: 8px 0 32px 0;
+  }
+
+  .about-me-ac-wrapper {
+    width: 1376px;
+    height: 40px;
+  }
+}
 /* ACOORDION STYLES  */
 
-.ac .ac-panel {
+.ac-about-me .ac-panel-about-me {
   overflow: hidden;
   transition-property: height, visibility;
   transition-timing-function: ease;
 }
 
-.ac.js-enabled .ac-panel {
+.ac-about-me.js-enabled .ac-panel-about-me {
   visibility: hidden;
 }
 
-.ac.is-active .ac-panel {
+.ac-about-me.is-active-about-me .ac-panel-about-me {
   visibility: visible;
 }
 
-.ac.is-active .about-me-ac-icon {
+.ac-about-me.is-active-about-me .about-me-ac-icon {
   transform: rotate(180deg);
 }
 
@@ -170,14 +286,68 @@
   opacity: 0.2;
 }
 
+/* SKILLS-LIST TABLET STYLES */
+
+@media only screen and (min-width: 768px) {
+  .skills-item.swiper-slide {
+    height: 200px;
+  }
+
+  .skills-item.swiper-slide {
+    font-size: 20px;
+  }
+
+  .skills-swip-btn-wrapper {
+    width: 104px;
+    height: 200px;
+  }
+
+  .skills-swip-icon {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+/* SKILLS-LIST DESKTOP STYLES */
+
+@media only screen and (min-width: 1440px) {
+  .skills-wrapper {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+
+  .skills-swip-btn-wrapper {
+    width: 112px;
+  }
+}
+
 /* SWIPER STYLES */
 
-.skills-swip-wrapper.swiper {
+.skills-swip-wrapper.swiper-one {
   display: flex;
   width: 260px;
+  overflow: hidden;
   margin-left: 0;
   margin-right: 0;
 }
 .swiper-slide-active {
   background-color: #c6e327;
+}
+
+/* SWIPER TABLET STYLES */
+
+@media only screen and (min-width: 768px) {
+  .skills-swip-wrapper.swiper-one {
+    width: 600px;
+    overflow: hidden;
+  }
+}
+
+/* SWIPER DESKTOP STYLES */
+
+@media only screen and (min-width: 1440px) {
+  .skills-swip-wrapper.swiper-one {
+    width: 1200px;
+    overflow: hidden;
+  }
 }
