@@ -28,7 +28,7 @@ new Accordion(".accordion-container-about-me", {
       onlyInViewport: true,
     },
     navigation: {
-      nextEl: '.swiper-button-next',
+      nextEl: '.skills-swiper-button-next',
     },
    breakpoints: {
       320: {
