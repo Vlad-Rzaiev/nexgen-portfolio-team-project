@@ -6,9 +6,12 @@ document.addEventListener("DOMContentLoaded", function () {
   existingAccordions.forEach(acc => acc.classList.remove("is-active"));
 
   new Accordion(".accordion-container", {
-    duration: 400,
+    duration: 800,
     showMultiple: false,
     collapse: true,
+    
   });
 });
+
+
     
