@@ -9,6 +9,7 @@ document.addEventListener('DOMContentLoaded', function () {
         modules: [Navigation, Keyboard],
         slidesPerView: 1,
         containerModifierClass: 'swiper-projects',
+        spaceBetween: 20,
 
         loop: false,
 
