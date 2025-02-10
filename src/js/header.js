@@ -35,3 +35,12 @@ export function handleClicks(event) {
   
   menuList?.classList.remove('show');
 }
+
+const header = document.querySelector('.header');
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 30) {
+    header.classList.add('header-fixed');
+  } else {
+    header.classList.remove('header-fixed');
+  }
+});
