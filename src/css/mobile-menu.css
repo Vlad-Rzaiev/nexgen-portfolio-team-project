@@ -1,6 +1,5 @@
 .mobile-menu {
-    background-image: image-set(url('/img/hero/hero-mobile@1.png') 1x,
-            url('/img/hero/hero-mobile@2.png') 2x);
+    background-image: url('/img/hero/hero-mobile@1.png');
     position: fixed;
     top: 0;
     left: 0;
@@ -10,14 +9,18 @@
     background-position: left top;
     background-repeat: repeat-y;
     background-size: 412px;
-    z-index: 9999;
+    z-index: 99999;
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
     transform: translateX(100%);
     transition: opacity 450ms ease, visibility 450ms ease, transform 450ms ease;
 }
-
+@media screen and (min-resolution: 192dpi) {
+    .hero {
+        background-image: url(/img/hero/hero_mobile@2.png);
+    }
+}
 @media screen and (-webkit-min-device-pixel-ratio: 2),
 (min-resolution: 2dppx),
 (min-resolution: 192dpi) {
@@ -37,19 +40,14 @@
     position: relative;
     width: 100%;
     height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 0;
+    padding: 302px 0 64px;
 }
 
 .mobile-menu-wrapper {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content:space-between;
-    width: 100%;
+    justify-content: space-between;
+    height: 100%;
 }
 
 .mobile-menu-button {
@@ -77,6 +75,7 @@
     justify-content: center;
     margin-left: auto;
     margin-right: auto;
+    padding-top: 15%;
     opacity: 1;
     visibility: visible;
     transition: opacity 450ms ease, visibility 450ms ease;
@@ -94,15 +93,11 @@
 }
 
 .mobile-menu-order {
-    margin-top: auto;
-    margin-bottom: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
     border-radius: 60px;
     background-color: #4ed728;
-    margin-top: 50px;
-    margin-top: 100px;
     padding: 14px 31px;
     min-width: 164px;
     height: 45px;
@@ -110,8 +105,10 @@
     font-size: 14px;
     opacity: 1;
     visibility: visible;
+    margin-left: auto;
+    margin-right: auto;
     transition: opacity 450ms ease, visibility 450ms ease,
-        background-color 450ms ease;
+    background-color 450ms ease;
 }
 
 .mobile-menu-order:hover,
