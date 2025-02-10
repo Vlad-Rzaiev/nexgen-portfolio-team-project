@@ -80,17 +80,7 @@
 .form-input:focus:active {
   color: var(--main-text);
 }
-.form-inf input.invalid {
-      border-bottom: 2px solid red;
-      /* Червона лінія при помилці */
-    }
-.error-message {
-  color: red;
-  font-size: 12px;
-  margin-top: 5px;
-  display: none;
-  /* Спочатку приховано */
-}
+
 /* Контакти */
 .footer-contacts-list {
   display: flex;
@@ -140,16 +130,30 @@
 
 .modal {
   display: none;
+  justify-content: center;
+  align-items: center;
+background: rgba(15, 15, 16, 0.6);
   position: fixed;
-  border: 1px solid rgba(250, 250, 250, 0.1);
-    border-radius: 20px;
-    padding: 64px 32px;
-    width: 343px;
-    height: 276px;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+ 
 }
 .modal-content {
-  width: 279px;
-    height: 148px;
+  border: 1px solid rgba(250, 250, 250, 0.1);
+    border-radius: 20px;
+    padding: 64px;
+    width: 492px;
+    height: 246px;
+  position: fixed;
+  background: var(--background);
+  justify-content: center;
+  border-radius: 20px;
+  width: 492px;
+  height: 246px;
 }
 .title-modal {
   font-family: var(--font-family);
@@ -159,7 +163,9 @@
     letter-spacing: -0.02em;
     text-align: center;
     color: var(--main-text);
-}
+    margin-bottom: 16px; 
+    white-space: nowrap;
+  }
 .text-modal {
   font-family: var(--font-family);
     font-weight: 500;
@@ -168,23 +174,19 @@
     letter-spacing: -0.02em;
     text-align: center;
     color: rgba(250, 250, 250, 0.6);
-}
+  }
 .close-btn {
   position: absolute;
-  top: 10px;
-  right: 10px;
+  top: 20px;
+  right: 20px;
   background: none;
   border: none;
   cursor: pointer;
   padding: 5px;
   transition: transform 0.2s ease;
+  color: white;
 }
 
-.close-btn:hover svg {
-  stroke: red;
-  /* Змінює колір іконки при наведенні */
-  transform: scale(1.1);
-}
 @media screen and (min-width: 320px) {
 
   .footer-container {
