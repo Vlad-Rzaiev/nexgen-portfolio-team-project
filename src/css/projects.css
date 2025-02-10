@@ -7,12 +7,12 @@
 }
 
 .projects-item {
-  background-color: #fafafa;
   border-radius: 24px;
   overflow: hidden;
 }
 
 .projects-content {
+  background-color: #fafafa;
   padding: 32px;
 }
 
