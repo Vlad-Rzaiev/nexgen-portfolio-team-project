@@ -7,8 +7,8 @@ const reviewsList = document.querySelector('.reviews-list');
 const renderMarkup = posts => {
   const markup = posts
     .map(
-      post => 
-      `<li class="reviews-item swiper-slide">
+      post =>
+        `<li class="reviews-item swiper-slide">
         <img class="reviews-img" src="${post.avatar_url}" alt="avatar" />
         <h3 class="reviews-post-title">${post.author}</h3>
         <p class="reviews-post-text">${post.review}</p>
@@ -29,6 +29,7 @@ const getData = async () => {
 };
 const swiper = new Swiper('.swiper', {
   slidesPerView: 1,
+  spaceBetween: 16,
   modules: [Navigation, Keyboard],
   loop: false,
   keyboard: {
