@@ -1,4 +1,177 @@
-h1,
-h2 {
-  color: brown;
+.projects .section-title {
+  margin-bottom: 32px;
+}
+
+.projects-slider {
+  overflow: hidden;
+}
+
+.projects-item {
+  background-color: #fafafa;
+  border-radius: 24px;
+  overflow: hidden;
+}
+
+.projects-content {
+  padding: 32px;
+}
+
+.projects-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 96px;
+}
+
+.tag {
+  padding: 13px 18px;
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  color: #1c1d20;
+  border: 1px solid rgba(28, 29, 32, 0.2);
+  border-radius: 60px;
+}
+
+.projects-title {
+  margin-bottom: 32px;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 1.17;
+  color: #1c1d20;
+}
+
+.projects-images {
+  padding: 100px 16px;
+  background-color: #242527;
+}
+
+.projects-link {
+  padding: 13px 32px;
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  color: #fafafa;
+  border: none;
+  background-color: #c6e327;
+  border-radius: 60px;
+  text-shadow: 1px 2px 2px rgba(0, 0, 0, 0.5);
+  transition: all 0.3s ease;
+}
+
+.projects-link:hover,
+.projects-link:focus {
+  background-color: #b9d326;
+  transform: scale(0.99);
+  box-shadow: inset 0 2px 2px rgba(5, 6, 2, 0.2);
+}
+
+.projects-navigation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 32px;
+  gap: 12px;
+}
+
+.projects-btn-prev,
+.projects-btn-next {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
+  border: 1px solid rgba(250, 250, 250, 0.5);
+  border-radius: 60%;
+  background-color: transparent;
+  transition: all 0.3s ease;
+}
+
+.projects-btn-prev:hover,
+.projects-btn-next:hover {
+  background-color: rgba(250, 250, 250, 0.1);
+  border-color: rgba(250, 250, 250, 0.7);
+}
+
+.projects-btn-prev:disabled,
+.projects-btn-next:disabled {
+  opacity: 0.3;
+  pointer-events: none;
+}
+
+.projects-svg {
+  width: 24px;
+  height: 24px;
+  fill: rgba(250, 250, 250, 0.4);
+  transition: fill 0.3s ease;
+}
+
+.projects-btn-prev:hover svg,
+.projects-btn-next:hover svg {
+  fill: rgba(250, 250, 250, 0.7);
+}
+
+
+/* Talet */
+
+@media screen and (min-width: 768px) {
+  .projects-content {
+    padding: 64px;
+  }
+
+  .projects-tags {
+    margin-bottom: 164px;
+  }
+
+  .tag {
+    padding: 18px;
+  }
+
+  .projects-title {
+    font-size: 44px;
+    width: 505px;
+  }
+
+  .projects-images {
+    padding: 120px 45px;
+  }
+
+  .projects-images img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+
+  .projects-navigation {
+    margin-top: 64px;
+    gap: 20px;
+
+  }
+}
+
+
+/* Desktop */
+
+@media screen and (min-width: 1440px) {
+  .projects-item.swiper-slide {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .projects-content {
+    flex: 1;
+    padding: 64px;
+  }
+
+  .projects-tags {
+    margin-bottom: 223px;
+  }
+
+  .projects-images {
+    flex: 1;
+    padding: 120px 37px;
+  }
+
 }

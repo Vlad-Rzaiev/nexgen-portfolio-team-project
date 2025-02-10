@@ -1,3 +1,150 @@
 .header {
-  color: transparent;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: transparent;
+  z-index: 1000;
+  padding-top: 32px;
+}
+/* PLASHKA */
+.header-fixed {
+position: fixed;
+  /* Фіксована позиція */
+  top: 0;
+  /* Відстань від верхньої частини */
+  left: 0;
+  /* Відстань від лівої частини */
+  width: 100%;
+  /* Ширина заголовка */
+  background-color: rgba(51, 51, 51, 0.9);
+  /* Напівпрозорий фон при фіксації */
+  padding-top: 16px;
+  /* Зменшені внутрішні відступи при фіксації */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  /* Тінь при фіксації */
+  z-index: 10000;
+  /* Високий z-index, щоб заголовок був поверх інших елементів */
+  transition: background-color 0.3s ease, padding-top 0.3s ease;
+  /* Анімація для фону та відступів */
+}
+.menu-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  border: none;
+  width: 28px;
+  height: 28px;
+}
+
+.logo-container {
+  display: flex;
+  gap: 8px;
+  align-items: flex-start;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+.nav {
+  display: none;
+}
+.burger {
+  stroke: #fafafa;
+  flex-shrink: 0;
+}
+
+.order-project {
+  display: none;
+}
+/* MOBIL */
+@media screen and (max-width: 767px) {
+  .header {
+    position: fixed;
+  }
+}
+/* TABLE */
+@media only screen and (min-width: 768px) {
+  .header {
+    position: fixed;
+  }
+  .nav {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .header-container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .menu {
+    border: none;
+    font-weight: 500;
+    color: #fafafa;
+    background-color: transparent;
+    text-decoration: underline;
+    transition: color 450ms ease;
+  }
+
+  .menu:hover,
+  .menu:focus {
+    color: #4ec12e;
+  }
+
+  .menu-list {
+    display: flex;
+    flex-direction: column;
+    margin-top: 15px;
+    gap: 5px;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 450ms ease, visibility 450ms ease;
+  }
+
+  .menu-list.show {
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 450ms ease;
+  }
+
+  .menu-button {
+    display: none;
+  }
+
+  .menu-item {
+    font-weight: 500;
+    font-size: 16px;
+    transition: color 450ms ease;
+  }
+
+  .menu-item:hover,
+  .menu-item:focus {
+    color: #4ec12e;
+  }
+
+  .order-project {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    white-space: nowrap;
+    border-radius: 60px;
+    background-color: #4ed728;
+    padding: 18px 24px;
+    max-width: 163px;
+    height: 55px;
+    font-weight: 500;
+    font-size: 16px;
+    transition: background-color 450ms ease;
+  }
+
+  .order-project:hover,
+  .order-project:focus {
+    background-color: #4ec12e;
+  }
 }
