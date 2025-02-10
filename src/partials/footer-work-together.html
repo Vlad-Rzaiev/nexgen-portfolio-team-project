@@ -1,23 +1,33 @@
 <footer id="work-together">
-  <div class="footer-container">
+  <div class="container">
   <div class="left-section">
     <div class="profile">
-    <h1 class="title-footer">
-      <svg alt="logo" class="logo-footer" /> Let's
+      <picture class="logo-footer">
+        <source srcset="../img/footer/icon_footer@1.png 1x, /img/footer/icon_footer@2.png 2x"
+        media="(min-width: 768px)" >
+        <source srcset="../img/footer/icon_footer_mobile@1.png 1x, ../img/footer/icon_footer_mobile@2.png 2x" media="(min-width: 320px)">
+        <img src="../img/footer/icon_footer@1.png" alt="Footer Icon">
+
+      </picture>
+    <h2 class="title-footer">
+       Let's
       <span class="work">work</span> together
     </h1>
   </div>
-  <form class="form-inf">
+  <form class="form-inf" id="form-inf">
     <div class="form-row">
     <input
       class="input-form-email"
       type="text"
-      name="user-email"
+      id="user-email"
       placeholder="clients@gmail.com"
       pattern="^\w+(.\w+)?@[a-zA-Z_]+?.[a-zA-Z]{2,3}$"
+      title="Invalid email, try again"
       required
     />
-    <input class="form-input" name="user-comment" placeholder="comments">
+  <div id="email-error" class="error-message">Invalid email, try again</div>
+
+    <input class="form-input" id="user-comment" placeholder="comments">
     </input>
   </div>
   <div class="right-section">
@@ -34,16 +44,28 @@
         >
       </li>
     </ul>
-      </div>  </div>
+      </div> 
   </form>
-
+ </div>
   </div>
   
 </footer>
 <div id="modal" class="modal">
   <div class="modal-content"> 
-    <span class="close-btn">&times;</span>
-    <h1>Thank you for your interest in cooperation!</h1>
-    <p>The manager will contact you shortly to discuss further details and opportunities for cooperation. Please stay in touch.</p>
+    <button class="close-btn"><svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M16.5 5.5L5.5 16.5" stroke="#FAFAFA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+  <path d="M5.5 5.5L16.5 16.5" stroke="#FAFAFA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+</svg>;</button>
+    <h1 class="title-modal">Thank you for your interest in cooperation!</h1>
+    <p class="text-modal">The manager will contact you shortly to discuss further details and opportunities for cooperation. Please stay in touch.</p>
   </div>
 </div>
+<div id="errorModal" class="modal">
+    <div class="modal-content">
+       
+<div id="successModal" style="display: none;">Заявку успішно надіслано!</div>
+<div id="errorModal" style="display: none;">Виникла помилка при відправці заявки.</div>
+        <button class="close-btn" onclick="closeModal('errorModal')">Закрити</button>
+    </div>
+</div>
+

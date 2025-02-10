@@ -1,36 +1,36 @@
 :root {
+
   --background: #1c1d20;
   --cards: #242527;
   --arrow: #3b3b3b;
-  --button-text: #4ed728;
+  --button-text:#c6e327;;
   --main-text: #fafafa;
 }
 
 .footer-container {
   display: flex;
   align-items: flex-start;
-  height: 100vh;
-  background-image: url(../img/footer/elements.png);
-  background-position: top right;
-  background-size: contain;
-  background-repeat: no-repeat;
+
   padding: 80px 32px 196px;
 }
-
+.profile {
+  display: flex;
+}
 .left-section {
   display: flex;
   flex-direction: column;
-  max-width: 60%;
+  height: 100vh;
+    background-image: url(/img/footer/elements.png);
+    background-position: top right;
+    background-size: contain;
+    background-repeat: no-repeat;
 }
-
 .logo-footer {
-  background: url(../img/footer/icon_footer@1.png) no-repeat;
-  background-size: cover;
   border-radius: 24px;
-  width: 70px;
-  height: 70px;
+    width: 70px;
+    height: 70px;
+    margin-right: 20px;
 }
-
 .title-footer {
   font-family: var(--font-family);
   font-weight: 500;
@@ -73,8 +73,24 @@
   color: rgba(250, 250, 250, 0.6);
   border: none;
   border-bottom: 1px solid rgba(250, 250, 250, 0.2);
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
-
+.input-form-email,
+.form-input:focus:active {
+  color: var(--main-text);
+}
+.form-inf input.invalid {
+      border-bottom: 2px solid red;
+      /* Червона лінія при помилці */
+    }
+.error-message {
+  color: red;
+  font-size: 12px;
+  margin-top: 5px;
+  display: none;
+  /* Спочатку приховано */
+}
 /* Контакти */
 .footer-contacts-list {
   display: flex;
@@ -124,21 +140,57 @@
 
 .modal {
   display: none;
+  position: fixed;
+  border: 1px solid rgba(250, 250, 250, 0.1);
+    border-radius: 20px;
+    padding: 64px 32px;
+    width: 343px;
+    height: 276px;
+}
+.modal-content {
+  width: 279px;
+    height: 148px;
+}
+.title-modal {
+  font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 150%;
+    letter-spacing: -0.02em;
+    text-align: center;
+    color: var(--main-text);
+}
+.text-modal {
+  font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: -0.02em;
+    text-align: center;
+    color: rgba(250, 250, 250, 0.6);
+}
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 5px;
+  transition: transform 0.2s ease;
 }
 
+.close-btn:hover svg {
+  stroke: red;
+  /* Змінює колір іконки при наведенні */
+  transform: scale(1.1);
+}
 @media screen and (min-width: 320px) {
 
   .footer-container {
     align-items: flex-start;
     padding: 96px 16px 32px;
     flex-direction: column;
-  }
-
-  .logo-footer {
-    border-radius: 12px;
-    padding: 10px;
-    width: 44px;
-    height: 44px;
   }
 
   .title-footer {
@@ -194,7 +246,10 @@
   .form-row {
     flex-direction: row;
   }
-
+.form-row input {
+  width: 245px;
+    height: 44px;
+}
   .title-footer {
     font-size: 64px;
   }
@@ -204,11 +259,15 @@
     width: 70px;
     height: 70px;
   }
-
+.right-section {
+  display: flex;
+  justify-content: flex-end; 
+}
   .btn-footer {
     width: 150px;
     height: 150px;
     margin-left: 32px;
+
   }
 .ft-email {
 width: 239px;
@@ -220,4 +279,9 @@ width: 239px;
     height: 55px;
     padding: 18px 32px;
 }
+}
+@media screen and (min-width: 1440px) {
+  .footer-container {
+    margin: 244px 196px 169px;
+  }
 }
