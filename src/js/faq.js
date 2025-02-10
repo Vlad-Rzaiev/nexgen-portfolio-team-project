@@ -1,15 +1,19 @@
 
+
+
 import Accordion from "accordion-js"; 
 
 document.addEventListener("DOMContentLoaded", function () {
-  
+
+    const existingAccordions = document.querySelectorAll(".accordion-item");
+    existingAccordions.forEach(acc => acc.classList.remove("is-active"));
+
     const accordion = new Accordion(".accordion-container", {
         duration: 800,
         showMultiple: false,
         collapse: true,
     });
 
-   
     const triggers = document.querySelectorAll('.ac-trigger');
 
     triggers.forEach((trigger) => {
@@ -25,6 +29,12 @@ document.addEventListener("DOMContentLoaded", function () {
                 panel.style.maxHeight = panel.scrollHeight + 'px'; 
                 panel.style.opacity = 1; 
             }
+
+            const iconWrapper = item.querySelector('.faq-icon-wrapper');
+            if (iconWrapper) {
+                iconWrapper.classList.toggle('rotate');
+            }
         });
     });
 });
+

@@ -1,3 +1,4 @@
+
 .faq {
   background-color: #1c1d20;
   display: flex;
@@ -121,6 +122,12 @@
 .accordion-item.is-active .faq-icon-wrapper {
   transform: rotate(180deg);
 }
+
+.faq-icon-wrapper.rotate {
+  transform: rotate(180deg);
+  transition: transform 0.3s ease-in-out;
+}
+
 
 .ac-panel {
   max-height: 0;
@@ -246,6 +253,7 @@
     padding: 26px 0 26px;
   }
 }
+
 
 
 
