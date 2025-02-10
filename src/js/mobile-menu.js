@@ -8,7 +8,6 @@ const orderBtn = document.querySelector('.mobile-menu-order');
 
 menuButton.addEventListener('click', onOpen);
 
-
 mobMenuButton.addEventListener('click', onClose);
 
 menuLinks.forEach(link => {
@@ -24,7 +23,7 @@ function onOrder(event) {
   handleClicks(event);
   mobMenu.classList.remove('show');
 }
-
+  
 function onOpen(event) {
   event.preventDefault();
   mobMenu.classList.add('show');
