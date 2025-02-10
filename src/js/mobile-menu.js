@@ -1,13 +1,14 @@
 import { handleClicks } from './header';
 
-const menuBtn = document.querySelector('.mobile-menu-button');
+const menuButton = document.querySelector('.menu-button');
 const mobMenu = document.querySelector('.mobile-menu');
-const mobBtn = document.querySelector('.mobile-menu-button');
+const mobMenuButton = document.querySelector('.mobile-menu-button');
 const menuLinks = document.querySelectorAll('.mobile-menu-list a');
 const orderBtn = document.querySelector('.mobile-menu-order');
 
-menuBtn.addEventListener('click', onOpen);
-mobBtn.addEventListener('click', onClose);
+menuButton.addEventListener('click', onOpen);
+
+mobMenuButton.addEventListener('click', onClose);
 
 menuLinks.forEach(link => {
   link.addEventListener('click', event => {

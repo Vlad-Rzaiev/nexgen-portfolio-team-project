@@ -7,7 +7,18 @@
   z-index: 1000;
   padding-top: 32px;
 }
-
+/* PLASHKA */
+.header-fixed {
+  position: absolute;
+  top: 5px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.671);
+  border-radius: 15px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
 .menu-button {
   display: flex;
   justify-content: center;
@@ -74,7 +85,7 @@
 
   .menu:hover,
   .menu:focus {
-    color: #ed3b44;
+    color: #4ec12e;
   }
 
   .menu-list {
@@ -107,7 +118,7 @@
 
   .menu-item:hover,
   .menu-item:focus {
-    color: #ed3b44;
+    color: #4ec12e;
   }
 
   .order-project {
@@ -117,7 +128,7 @@
     text-align: center;
     white-space: nowrap;
     border-radius: 60px;
-    background-color: #ed3b44;
+    background-color: #4ed728;
     padding: 18px 24px;
     max-width: 163px;
     height: 55px;
@@ -128,6 +139,6 @@
 
   .order-project:hover,
   .order-project:focus {
-    background-color: #e0373f;
+    background-color: #4ec12e;
   }
 }
