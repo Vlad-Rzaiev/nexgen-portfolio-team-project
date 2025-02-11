@@ -22,7 +22,7 @@ function onDocumentClick(event) {
 
 export function handleClicks(event) {
   event.preventDefault();
-  
+
   const target = event.target.closest('a');
   if (!target || !target.getAttribute('href')) return;
 
@@ -32,7 +32,7 @@ export function handleClicks(event) {
   if (section) {
     section.scrollIntoView({ behavior: 'smooth', block: 'start' });
   }
-  
+
   menuList?.classList.remove('show');
 }
 
@@ -45,21 +45,20 @@ window.addEventListener('scroll', () => {
   }
 });
 const containerHeader = document.querySelector('.header-container');
-const headerGlobal = document.getElementById("header");
+const headerGlobal = document.getElementById('header');
 let lastScrollTop = 0;
 
 const handleScroll = () => {
-    const currentScroll = window.scrollY || document.documentElement.scrollTop;
-    if (currentScroll < lastScrollTop) {
-        // Прокрутка вгору - ховати хедер
-        headerGlobal.style.top = "-200px"; // приховуємо, висота хедера - (висота контейнера/хедер на яку потрібно сховати хедер, наприклад "-156px")
-        containerHeader.style.backgroundColor = "none";
-    } else {
-        // Прокрутка вниз - показати хедер
-        headerGlobal.style.top = "0";
-        
-    }
-    lastScrollTop = currentScroll <= 0 ? 0 : currentScroll; // Для безпеки
+  const currentScroll = window.scrollY || document.documentElement.scrollTop;
+  if (currentScroll > lastScrollTop) {
+    // Прокрутка вгору - ховати хедер
+    headerGlobal.style.top = '-200px'; // приховуємо, висота хедера - (висота контейнера/хедер на яку потрібно сховати хедер, наприклад "-156px")
+    containerHeader.style.backgroundColor = 'none';
+  } else {
+    // Прокрутка вниз - показати хедер
+    headerGlobal.style.top = '8px';
+  }
+  lastScrollTop = currentScroll <= 0 ? 0 : currentScroll; // Для безпеки
 };
 
-window.addEventListener("scroll", handleScroll);
+window.addEventListener('scroll', handleScroll);

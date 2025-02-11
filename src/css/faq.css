@@ -1,4 +1,3 @@
-
 .faq {
   background-color: #1c1d20;
   display: flex;
@@ -14,8 +13,7 @@
 }
 
 .faq-icon-wrapper {
-
-  flex-shrink: 0; 
+  flex-shrink: 0;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -36,12 +34,8 @@
   padding: 0;
   margin: 0;
   display: grid;
-  grid-template-columns: 1fr; 
-  
+  grid-template-columns: 1fr;
 }
-
-
-
 
 /*  General accordion styles */
 .accordion-item {
@@ -52,48 +46,43 @@
   align-items: flex-start;
   justify-content: flex-start;
   flex-direction: column;
-
 }
 
 .accordion-item:nth-child(odd) {
-  border-left: none; 
+  border-left: none;
 }
 
 .accordion-item:nth-child(even) {
-  border-right: none; 
+  border-right: none;
 }
-
 
 .accordion-item:first-child {
-  border-top: 1px solid #444; 
+  border-top: 1px solid #444;
 }
 
 .accordion-item:nth-child(even) {
-  border-top: 1px solid #444; 
+  border-top: 1px solid #444;
 }
 
-
 .ac-trigger {
-  position: relative; 
+  position: relative;
   width: 100%;
   background: none;
   border: none;
   text-align: left;
   cursor: pointer;
-  display: flex; 
-  justify-content: space-between; 
+  display: flex;
+  justify-content: space-between;
   gap: 20px;
-  align-items: center; 
+  align-items: center;
   transition: background-color 0.3s ease-in-out;
   font-weight: 600;
   font-size: 20px;
   line-height: 150%;
   letter-spacing: -0.02em;
   color: #fafafa;
-  
-  padding: 20px 0;
-  
 
+  padding-top: 20px;
 }
 
 .ac-trigger:active {
@@ -107,19 +96,22 @@
   line-height: 1.5;
   letter-spacing: -0.02em;
   color: rgba(250, 250, 250, 0.6);
-  margin: 16px 0 20px;
-
-
-  transition: margin 0.8s ease-in-out;
 }
 
+.ac.is-active .faq-text {
+  padding-bottom: 16px;
+}
+
+.ac.js-enabled .faq-text {
+  padding-bottom: 16px;
+}
 
 .accordion-icon {
   transition: transform 0.8s ease-in-out;
   border-radius: 100px;
   flex-shrink: 0;
   fill: rgba(250, 250, 250, 0.6);
- 
+
   gap: 10px;
 }
 
@@ -132,20 +124,22 @@
   transition: transform 0.8s ease-in-out;
 }
 
-
-
-.ac-panel {
+.ac.ac-panel {
   max-height: 0;
   overflow: hidden;
   opacity: 0;
   transition: max-height 0.4s ease-in-out, opacity 0.4s ease-in-out;
+  transition-timing-function: ease;
+}
+
+.accordion-item.js-enabled .ac-panel {
+  opacity: 0;
 }
 
 .accordion-item.is-active .ac-panel {
   max-height: 500px;
   opacity: 1;
 }
-
 
 /* Mobile (320px - 374px) */
 @media (max-width: 374px) {
@@ -166,17 +160,13 @@
   .ac-trigger {
     padding: 16px 60px 16px 0;
   }
-  .faq-text {
-    margin: 16px 0 20px;
-  }
-
 }
 /* Mobile (375px - 767px) */
 
 @media (min-width: 375px) and (max-width: 767px) {
   .accordion-container {
     display: flex;
-  
+
     flex-direction: column;
   }
   .accordion-item {
@@ -191,66 +181,77 @@
     width: 34px;
     height: 34px;
   }
-  .faq-text {
-    margin: 16px 0 20px;
-  }
-
 }
-
 
 @media (max-width: 1439px) {
- 
-  .accordion-item[data-order="1"] { order: 1; }
-  .accordion-item[data-order="3"] { order: 2; }
-  .accordion-item[data-order="5"] { order: 3; }
-  .accordion-item[data-order="2"] { order: 4; }
-  .accordion-item[data-order="4"] { order: 5; }
-  .accordion-item[data-order="6"] { order: 6; }
+  .accordion-item[data-order='1'] {
+    order: 1;
+  }
+  .accordion-item[data-order='3'] {
+    order: 2;
+  }
+  .accordion-item[data-order='5'] {
+    order: 3;
+  }
+  .accordion-item[data-order='2'] {
+    order: 4;
+  }
+  .accordion-item[data-order='4'] {
+    order: 5;
+  }
+  .accordion-item[data-order='6'] {
+    order: 6;
+  }
 }
 
-
-
-
 /* Tablet (768px - 1439px) */
-
 
 @media (min-width: 768px) and (max-width: 1439px) {
   .accordion-container {
     display: flex;
-    flex-direction: column; 
+    flex-direction: column;
   }
   .ac-trigger {
     padding: 32px 0 32px 0;
   }
-    .faq-text {
-      margin: 26px 0 24px;
-    }
-    .accordion-item {
-      width: 100%;
-     
-    }
-    .faq-icon-wrapper {
-      width: 40px;
-      height: 40px;
-    }
-  
-  .accordion-item[data-order="1"] { order: 1; }
-  .accordion-item[data-order="3"] { order: 2; }
-  .accordion-item[data-order="5"] { order: 3; }
-  .accordion-item[data-order="2"] { order: 4; }
-  .accordion-item[data-order="4"] { order: 5; }
-  .accordion-item[data-order="6"] { order: 6; }
+  .faq-text {
+    margin: 26px 0 24px;
+  }
+  .accordion-item {
+    width: 100%;
+  }
+  .faq-icon-wrapper {
+    width: 40px;
+    height: 40px;
+  }
+
+  .accordion-item[data-order='1'] {
+    order: 1;
+  }
+  .accordion-item[data-order='3'] {
+    order: 2;
+  }
+  .accordion-item[data-order='5'] {
+    order: 3;
+  }
+  .accordion-item[data-order='2'] {
+    order: 4;
+  }
+  .accordion-item[data-order='4'] {
+    order: 5;
+  }
+  .accordion-item[data-order='6'] {
+    order: 6;
+  }
 }
 
 @media (min-width: 1440px) {
   .accordion-container {
     grid-template-columns: repeat(2, 1fr);
-  
   }
   .faq-icon-wrapper {
     width: 40px;
     height: 40px;
-
   }
   .accordion-item:nth-child(odd) {
     border-right: 2px solid rgba(250, 250, 250, 0.2);
@@ -259,25 +260,15 @@
     padding-left: 32px;
   }
   .ac-trigger {
- 
-    max-width: 100%; 
-    text-align: left; 
+    max-width: 100%;
+    text-align: left;
     padding: 32px 0 42px;
-
-
-
   }
   .faq-text {
     margin: 26px 0 26px;
   }
 
- .accordion-item:nth-child(odd) .faq-icon-wrapper {
-  margin-right: 32px;
+  .accordion-item:nth-child(odd) .faq-icon-wrapper {
+    margin-right: 32px;
+  }
 }
-  
-
-}
-
-
-
-
