@@ -74,13 +74,14 @@
   display: flex;
   justify-content: space-between;
   gap: 20px;
-  align-items: center;
+  align-items: start;
   transition: background-color 0.3s ease-in-out;
   font-weight: 600;
   font-size: 20px;
   line-height: 150%;
   letter-spacing: -0.02em;
   color: #fafafa;
+  -webkit-tap-highlight-color: transparent;
 
   padding-top: 20px;
 }
@@ -96,10 +97,6 @@
   line-height: 1.5;
   letter-spacing: -0.02em;
   color: rgba(250, 250, 250, 0.6);
-}
-
-.ac.is-active .faq-text {
-  padding-bottom: 16px;
 }
 
 .ac.js-enabled .faq-text {
@@ -158,7 +155,7 @@
   }
 
   .ac-trigger {
-    padding: 16px 60px 16px 0;
+    padding: 16px 0 16px 0;
   }
 }
 /* Mobile (375px - 767px) */
@@ -211,11 +208,21 @@
     display: flex;
     flex-direction: column;
   }
+  .accordion-item {
+    padding-bottom: 32px;
+  }
   .ac-trigger {
-    padding: 32px 0 32px 0;
+    align-items: center;
+    padding-top: 32px;
+  }
+  .ac.is-active {
+    padding-bottom: 24px;
+  }
+  .ac.js-enabled .faq-text {
+    padding-bottom: none;
   }
   .faq-text {
-    margin: 26px 0 24px;
+    margin: 16px 0 24px;
   }
   .accordion-item {
     width: 100%;

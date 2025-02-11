@@ -195,6 +195,11 @@
     padding-bottom: 32px;
   }
 
+  .about-me-icon-wrapper {
+    width: 40px;
+    height: 40px;
+  }
+
   .about-me-ac-wrapper {
     max-width: 704px;
     height: 40px;
