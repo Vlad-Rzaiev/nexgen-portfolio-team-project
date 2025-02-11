@@ -14,16 +14,24 @@
   display: flex;
   align-items: flex-start;
   flex-direction: column;
-  background-position: 285px 0px;
-  background-size: contain;
+  background-position: 270px 0px;
   background-repeat: no-repeat;
-  background-image: url(/img/footer/elements.png),
-    url(/img/footer/elements2x.png);
+  background-image: url(/img/footer/bg-footer-mobile.png);
 }
+
+@media screen and (min-resolution: 192dpi) {
+  .footer-container {
+    background-image: url(/img/footer/bg-footer-mobile@2x.png);
+  }
+}
+
 .profile {
   padding-top: 32px;
   display: flex;
+  align-items: center;
   flex-wrap: wrap;
+  gap: 8px;
+  max-width: max-content;
   margin-bottom: 63px;
 }
 .footer-picture {
@@ -34,19 +42,26 @@
   border-radius: 12px;
   margin-right: 8px;
 }
-.title-footer,
-.footer-title-part2 {
+
+.title-footer {
   font-weight: 500;
   font-size: 40px;
   line-height: 100%;
   letter-spacing: -0.03em;
   text-transform: uppercase;
   color: var(--main-text);
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 15px;
+  row-gap: 8px;
 }
+
 .work {
   color: #c6e327;
 }
-
+.form-inf {
+  width: 100%;
+}
 .form-row {
   display: flex;
   flex-direction: column;
@@ -58,12 +73,10 @@
 .footer-input-comment {
   background: transparent;
   width: 100%;
-  max-width: 390px;
-  width: 343px;
   height: 44px;
   font-weight: 500;
   font-size: 16px;
-  line-height: 150%;
+  line-height: 1.5;
   letter-spacing: -0.02em;
   color: rgba(250, 250, 250, 0.6);
   border: none;
@@ -88,7 +101,8 @@
   margin-left: 16px;
   margin-bottom: 64px;
 }
-.btn-footer:hover {
+.btn-footer:hover,
+.btn-footer:focus {
   background-color: #a5c000;
 }
 /* Стиль для валідного вводу */
@@ -214,7 +228,13 @@
     padding: 64px 0;
   }
   .footer-container {
-    background-position: 565px 0px;
+    background-image: url(/img/footer/bg-footer-tablet.png);
+    background-position: 575px 0px;
+  }
+  @media screen and (min-resolution: 192dpi) {
+    .footer-container {
+      background-image: url(/img/footer/bg-footer-tablet@2x.png);
+    }
   }
   .profile {
     padding-top: 80px;
@@ -240,6 +260,8 @@
 
   .form-inf {
     position: relative;
+    min-width: 288px;
+    max-width: 375px;
   }
   .form-row {
     display: flex;
@@ -258,7 +280,7 @@
     justify-content: center;
     align-items: center;
     position: absolute;
-    right: -182px;
+    right: -330px;
     top: -30px;
     width: 150px;
     height: 150px;
@@ -294,13 +316,34 @@
 }
 
 @media screen and (min-width: 1440px) {
+  .footer-container {
+    width: 100%;
+    padding-left: 196px;
+    background-image: url(/img/footer/bg-footer-desktop.jpg);
+    background-position: 1090px 0px;
+  }
+
+  @media screen and (min-resolution: 192dpi) {
+    .footer-container {
+      background-image: url(/img/footer/bg-footer-desktop@2x.png);
+    }
+  }
+
+  .form-inf {
+    max-width: 812px;
+  }
+
+  .form-row {
+    width: 100%;
+  }
+
   .footer-input-email,
   .footer-input-comment {
     width: 390px;
     height: 44px;
   }
+  .btn-footer {
+    right: -240px;
 
-  .footer-title-part2 {
-    flex-basis: 100%;
   }
 }
