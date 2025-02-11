@@ -38,10 +38,12 @@
 
 .benefits-link:link,
 .benefits-link:visited {
+  display: block;
+  text-wrap: nowrap;
+  width: 187px;
   padding: 18px 36px;
   border-radius: 60px;
   border: solid 1px rgba(250, 250, 250, 0.2);
-  background-color: inherit;
 }
 
 .benefits-link:hover,

@@ -40,7 +40,6 @@
   align-items: flex-start;
 }
 
-
 .wrapper {
   display: flex;
   justify-content: space-between;
@@ -57,8 +56,8 @@
   display: none;
 }
 /* MOBIL */
-@media screen and (max-width: 767px){
-  .header{
+@media screen and (max-width: 767px) {
+  .header {
     position: fixed;
   }
   .logo-container{
@@ -71,23 +70,23 @@
       position: fixed;
   }
   .header-fixed {
-      max-width: 768px;
+    max-width: 768px;
+    position: fixed;
   }
   .nav {
-      display: flex;
-      flex-direction: column;
+    display: flex;
+    flex-direction: column;
   }
-  
+
   .header-container {
     display: flex;
     justify-content: space-between;
   }
 
-
   .menu {
     border: none;
     font-weight: 500;
-    color: #FAFAFA;
+    color: #fafafa;
     background-color: transparent;
     text-decoration: underline;
     transition: color 450ms ease;

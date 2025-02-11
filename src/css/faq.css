@@ -14,9 +14,8 @@
 }
 
 .faq-icon-wrapper {
-  position: absolute;
-  top: 16px;
-  right: 16px;
+
+  flex-shrink: 0; 
   display: flex;
   align-items: center;
   justify-content: center;
@@ -24,7 +23,7 @@
   border-radius: 50%;
   width: 40px;
   height: 40px;
-  flex-shrink: 0;
+  transition: transform 0.3s ease-in-out;
 }
 
 .faq-title {
@@ -38,23 +37,22 @@
   margin: 0;
   display: grid;
   grid-template-columns: 1fr; 
-  gap: 0;
+  
 }
 
 
-.accordion-item.is-active .ac-trigger {
-  padding-bottom: 0; 
-}
-
-.accordion-item.is-active .faq-text {
-  padding: 0; 
-}
 
 
+/*  General accordion styles */
 .accordion-item {
   border-bottom: 1px solid #444;
   overflow: hidden;
   box-sizing: border-box;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+
 }
 
 .accordion-item:nth-child(odd) {
@@ -76,25 +74,26 @@
 
 
 .ac-trigger {
-  position: relative;
+  position: relative; 
   width: 100%;
-  min-height: 30px;
   background: none;
   border: none;
   text-align: left;
   cursor: pointer;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  display: flex; 
+  justify-content: space-between; 
+  gap: 20px;
+  align-items: center; 
   transition: background-color 0.3s ease-in-out;
-  box-sizing: border-box;
   font-weight: 600;
   font-size: 20px;
   line-height: 150%;
   letter-spacing: -0.02em;
   color: #fafafa;
+  
   padding: 20px 0;
-  padding-right: 171px;
+  
+
 }
 
 .ac-trigger:active {
@@ -108,15 +107,20 @@
   line-height: 1.5;
   letter-spacing: -0.02em;
   color: rgba(250, 250, 250, 0.6);
- 
-  padding: 16px 0 20px;}
+  margin: 16px 0 20px;
+
+
+  transition: margin 0.8s ease-in-out;
+}
 
 
 .accordion-icon {
-  transition: transform 0.3s ease-in-out;
+  transition: transform 0.8s ease-in-out;
   border-radius: 100px;
   flex-shrink: 0;
   fill: rgba(250, 250, 250, 0.6);
+ 
+  gap: 10px;
 }
 
 .accordion-item.is-active .faq-icon-wrapper {
@@ -125,8 +129,9 @@
 
 .faq-icon-wrapper.rotate {
   transform: rotate(180deg);
-  transition: transform 0.3s ease-in-out;
+  transition: transform 0.8s ease-in-out;
 }
+
 
 
 .ac-panel {
@@ -142,6 +147,7 @@
 }
 
 
+/* Mobile (320px - 374px) */
 @media (max-width: 374px) {
   .accordion-container {
     display: flex;
@@ -156,8 +162,16 @@
     border-left: none;
     border-right: none;
   }
-}
 
+  .ac-trigger {
+    padding: 16px 60px 16px 0;
+  }
+  .faq-text {
+    margin: 16px 0 20px;
+  }
+
+}
+/* Mobile (375px - 767px) */
 
 @media (min-width: 375px) and (max-width: 767px) {
   .accordion-container {
@@ -171,20 +185,21 @@
     border-right: none;
   }
   .ac-trigger {
-    padding-right: 60px;
+    padding: 20px 0;
   }
   .faq-icon-wrapper {
     width: 34px;
     height: 34px;
+  }
+  .faq-text {
+    margin: 16px 0 20px;
   }
 
 }
 
 
 @media (max-width: 1439px) {
-    .faq-text {
-    padding: 26px 0 24px;
-  }
+ 
   .accordion-item[data-order="1"] { order: 1; }
   .accordion-item[data-order="3"] { order: 2; }
   .accordion-item[data-order="5"] { order: 3; }
@@ -196,7 +211,7 @@
 
 
 
-
+/* Tablet (768px - 1439px) */
 
 
 @media (min-width: 768px) and (max-width: 1439px) {
@@ -204,7 +219,20 @@
     display: flex;
     flex-direction: column; 
   }
-
+  .ac-trigger {
+    padding: 32px 0 32px 0;
+  }
+    .faq-text {
+      margin: 26px 0 24px;
+    }
+    .accordion-item {
+      width: 100%;
+     
+    }
+    .faq-icon-wrapper {
+      width: 40px;
+      height: 40px;
+    }
   
   .accordion-item[data-order="1"] { order: 1; }
   .accordion-item[data-order="3"] { order: 2; }
@@ -213,22 +241,6 @@
   .accordion-item[data-order="4"] { order: 5; }
   .accordion-item[data-order="6"] { order: 6; }
 }
-
-.faq-text {padding: 16px 0 20px;} 
-  .ac-trigger {
-    padding-top: 32px;
-   
-  }
-  /* .faq-text {
-    padding: 26px 0 24px;
-  } */
-  .accordion-item {
-    width: 100%;
-  }
-
- 
-
-
 
 @media (min-width: 1440px) {
   .accordion-container {
@@ -238,6 +250,7 @@
   .faq-icon-wrapper {
     width: 40px;
     height: 40px;
+
   }
   .accordion-item:nth-child(odd) {
     border-right: 2px solid rgba(250, 250, 250, 0.2);
@@ -246,12 +259,23 @@
     padding-left: 32px;
   }
   .ac-trigger {
-    padding-top: 32px;
-   
+ 
+    max-width: 100%; 
+    text-align: left; 
+    padding: 32px 0 42px;
+
+
+
   }
   .faq-text {
-    padding: 26px 0 26px;
+    margin: 26px 0 26px;
   }
+
+ .accordion-item:nth-child(odd) .faq-icon-wrapper {
+  margin-right: 32px;
+}
+  
+
 }
 
 

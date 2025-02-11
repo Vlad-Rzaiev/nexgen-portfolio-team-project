@@ -18,6 +18,7 @@ new Accordion(".accordion-container-about-me", {
  const swiper = new Swiper('.swiper-one', {
    modules: [Navigation, Keyboard],
    containerModifierClass: 'swiper-one',
+   slideActiveClass: 'about-me-swiper-slide-active',
    slidesPerView: 2,
     allowTouchMove: true,
     loop: true,
