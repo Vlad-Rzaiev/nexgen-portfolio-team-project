@@ -1,63 +1,105 @@
-<footer id="work-together">
-  <div class="container">
-  <div class="left-section">
+<footer class="footer-page" id="work-together">
+  <div class="container footer-container">
     <div class="profile">
-      <picture class="logo-footer">
-        <source srcset="../img/footer/icon_footer@1.png 1x, /img/footer/icon_footer@2.png 2x"
-        media="(min-width: 768px)" >
-        <source srcset="../img/footer/icon_footer_mobile@1.png 1x, ../img/footer/icon_footer_mobile@2.png 2x" media="(min-width: 320px)">
-        <img src="../img/footer/icon_footer@1.png" alt="Footer Icon">
-
+      <picture class="footer-picture">
+        <source
+          srcset="
+            ./img/footer/icon_footer@1.png 1x,
+            ./img/footer/icon_footer@2.png 2x
+          "
+          media="(min-width: 768px)"
+        />
+        <source
+          srcset="
+            ./img/footer/icon_footer_mobile@1.png 1x,
+            ./img/footer/icon_footer_mobile@2.png 2x
+          "
+          media="(max-width: 767px)"
+        />
+        <img
+          class="logo-footer-img"
+          src="./img/footer/icon_footer_mobile@1.png"
+          alt="Footer Icon"
+          width="44"
+          height="44"
+        />
       </picture>
-    <h2 class="title-footer">
-       Let's
-      <span class="work">work</span> together
-    </h1>
+      <h2 class="title-footer">
+        Let's
+        <span class="work">work </span>
+      </h2>
+      <p class="footer-title-part2">together</p>
+    </div>
+    <form class="form-inf" id="form-inf">
+      <div class="form-row">
+        <div class="footer-form-email">
+          <input
+            class="footer-input-email"
+            type="text"
+            id="user-email"
+            placeholder="clients@gmail.com"
+            pattern="^\w+(.\w+)?@[a-zA-Z_]+?.[a-zA-Z]{2,3}$"
+            required
+          />
+          <div class="footer-input-message"></div>
+        </div>
+        <input
+          class="footer-input-comment"
+          id="user-comment"
+          placeholder="comments"
+        />
+      </div>
+      <button class="btn-footer" type="submit" id="openModal">Send</button>
+      <div class="form-contacts">
+        <ul class="footer-contacts-list">
+          <li class="footer-item">
+            <a
+              class="footer-contacts-link footer-email"
+              href="lloydjefferson@gmail.com"
+              >lloydjefferson@gmail.com</a
+            >
+            <a
+              class="footer-contacts-link footer-phone"
+              href="+380 11 1111 11 11"
+              >+380 11 1111 11 11</a
+            >
+          </li>
+        </ul>
+      </div>
+    </form>
   </div>
-  <form class="form-inf" id="form-inf">
-    <div class="form-row">
-    <input
-      class="input-form-email"
-      type="text"
-      id="user-email"
-      placeholder="clients@gmail.com"
-      pattern="^\w+(.\w+)?@[a-zA-Z_]+?.[a-zA-Z]{2,3}$"
-      required
-    />
-    <span class="footer-input-message"></span>
-
-    <input class="form-input" id="user-comment" placeholder="comments">
-    </input>
-  </div>
-  <!-- <div class="right-section"> -->
-    <button class="btn-footer" type="submit" id="openModal">Send</button>
-  <!-- </div> -->
-  <div class="form-contacts">
-    <ul class="footer-contacts-list">
-      <li class="footer-item">
-        <a class="footer-contacts-link ft-email" href="lloydjefferson@gmail.com"
-          >lloydjefferson@gmail.com</a
-        >
-        <a class="footer-contacts-link ft-phone" href="+380 11 1111 11 11"
-          >+380 11 1111 11 11</a
-        >
-      </li>
-    </ul>
-      </div> 
-  </form>
- </div>
-  </div>
-  </footer>
+</footer>
 
 <div id="footer-modal" class="modal">
-  <div class="modal-content"> 
-    <button class="close-btn" id="close-btn"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <path d="M18 6L6 18" stroke="#FAFAFA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-  <path d="M6 6L18 18" stroke="#FAFAFA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-</svg></button>
+  <div class="modal-content">
+    <button class="close-btn" id="close-btn">
+      <svg
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M18 6L6 18"
+          stroke="#FAFAFA"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+        <path
+          d="M6 6L18 18"
+          stroke="#FAFAFA"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+      </svg>
+    </button>
     <h1 class="title-modal">Thank you for your interest in cooperation!</h1>
-    <p class="text-modal">The manager will contact you shortly to discuss further details and opportunities for cooperation. Please stay in touch.</p>
+    <p class="text-modal">
+      The manager will contact you shortly to discuss further details and
+      opportunities for cooperation. Please stay in touch.
+    </p>
   </div>
 </div>
-
-
