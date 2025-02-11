@@ -216,10 +216,10 @@
     padding-top: 32px;
   }
   .ac.js-enabled .faq-text {
-    padding-bottom: none;
+    padding-bottom: unset;
   }
   .faq-text {
-    margin: 16px 0 24px;
+    margin: 16px 0 24px 6px;
   }
   .accordion-item {
     width: 100%;

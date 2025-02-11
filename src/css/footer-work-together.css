@@ -43,7 +43,8 @@
   margin-right: 8px;
 }
 
-.title-footer {
+.title-footer-inline,
+.title-footer-block {
   font-weight: 500;
   font-size: 40px;
   line-height: 100%;
@@ -60,7 +61,8 @@
   color: #c6e327;
 }
 .form-inf {
-  width: 100%;
+  min-width: 288px;
+  max-width: 343px;
 }
 .form-row {
   display: flex;
@@ -84,10 +86,11 @@
   overflow: hidden;
   text-overflow: ellipsis;
 }
-.footer-input-email,
-.footer-input-comment:focus:active {
+
+.footer-input-email:focus,
+.footer-input-comment:focus {
   color: var(--main-text);
-  border-bottom: 1px solid rgba(250, 250, 250, 0.5);
+  border-color: rgba(250, 250, 250, 0.5);
 }
 .btn-footer {
   border-radius: 100%;
@@ -100,6 +103,7 @@
   cursor: pointer;
   margin-left: 16px;
   margin-bottom: 64px;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
 }
 .btn-footer:hover,
 .btn-footer:focus {
@@ -188,7 +192,7 @@
   border: 1px solid rgba(250, 250, 250, 0.1);
   border-radius: 20px;
   padding: 64px 32px;
-  width: 343px;
+  width: 288px;
   height: 276px;
   position: fixed;
   background: var(--background);
@@ -223,6 +227,16 @@
   transition: transform 0.2s ease;
   fill: #fafafa;
 }
+@media only screen and (min-width: 375px) {
+  .modal-content {
+    width: 343px;
+  }
+  .form-inf {
+    min-width: unset;
+    max-width: unset;
+    width: 343px;
+  }
+}
 @media screen and (min-width: 768px) {
   .footer-page {
     padding: 64px 0;
@@ -237,11 +251,14 @@
     }
   }
   .profile {
+    flex-direction: row;
     padding-top: 80px;
     margin-bottom: 64px;
     row-gap: 10px;
+    width: 542px;
   }
-  .title-footer,
+  .title-footer-inline,
+  .title-footer-block,
   .footer-title-part2 {
     font-size: 64px;
   }
@@ -260,8 +277,7 @@
 
   .form-inf {
     position: relative;
-    min-width: 288px;
-    max-width: 375px;
+    width: 522px;
   }
   .form-row {
     display: flex;
@@ -280,7 +296,7 @@
     justify-content: center;
     align-items: center;
     position: absolute;
-    right: -330px;
+    right: -180px;
     top: -30px;
     width: 150px;
     height: 150px;
@@ -330,7 +346,7 @@
   }
 
   .form-inf {
-    max-width: 812px;
+    width: 812px;
   }
 
   .form-row {
@@ -344,6 +360,5 @@
   }
   .btn-footer {
     right: -240px;
-
   }
 }

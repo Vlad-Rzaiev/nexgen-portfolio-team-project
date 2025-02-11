@@ -306,14 +306,14 @@
 
 @media only screen and (min-width: 375px) {
   .skills-wrapper {
-    min-width: none;
-    max-width: none;
-    min-height: none;
+    min-width: unset;
+    max-width: unset;
+    min-height: unset;
     height: 130px;
   }
 
   .skills-swip-btn-wrapper {
-    min-width: none;
+    min-width: unset;
     width: 83px;
   }
 }
