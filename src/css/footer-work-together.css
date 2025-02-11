@@ -79,6 +79,32 @@
 .input-form-email,
 .form-input:focus:active {
   color: var(--main-text);
+  border-bottom: 1px solid rgba(250, 250, 250, 0.5);
+}
+/* Стиль для валідного вводу */
+.input-form-email:not(:placeholder-shown):valid {
+  border-color: #3cbc81;
+}
+
+/* Стиль для невалідного вводу */
+.input-form-email:not(:placeholder-shown):invalid {
+  border-color: #e74a3b;
+}
+
+/* Повідомлення для валідного вводу */
+.input-form-email:not(:placeholder-shown):valid + .footer-input-message::after {
+  content: "Succes!";
+  color: #3cbc81;
+  font-size: 14px;
+  display: block;
+}
+
+/* Повідомлення для невалідного вводу */
+.input-form-email:not(:placeholder-shown):invalid + .footer-input-message::after {
+  content: "Invalid email, try again";
+  color: #e74a3b;
+  font-size: 14px;
+  display: block;
 }
 
 /* Контакти */
@@ -242,6 +268,14 @@ background: rgba(15, 15, 16, 0.6);
     height: 37px;
     font-size: 14px;
   }
+  .modal-content {
+    padding: 64px 32px;
+      width: 343px;
+      height: 276px;
+  }
+  .title-modal {
+    white-space: wrap;
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -263,23 +297,32 @@ background: rgba(15, 15, 16, 0.6);
   }
 .right-section {
   display: flex;
-  justify-content: flex-end; 
+  position: relative;
 }
-  .btn-footer {
+.left-section {
+  position: relative;
+}
+   .btn-footer {
+    top: auto;
+    right: 16px; 
+    position: absolute;
+    justify-content: center;
+    align-items: center;
     width: 150px;
     height: 150px;
-    margin-left: 32px;
-
+display: flex;
   }
 .ft-email {
 width: 239px;
   height: 55px;
   padding: 18px 32px;
+  font-size: 16px;
 }
 .ft-phone {
   width: 171px;
     height: 55px;
     padding: 18px 32px;
+    font-size: 16px;
 }
 }
 @media screen and (min-width: 1440px) {
