@@ -18,7 +18,7 @@
   background-position: 285px 0px;
   background-size: contain;
   background-repeat: no-repeat;
-  background-image: url(/img/footer/elements.png);
+  background-image: url(/img/footer/elements.png), url(/img/footer/elements2x.png);
 }
 .profile {
   padding-top: 32px;
@@ -207,9 +207,8 @@
   cursor: pointer;
   padding: 5px;
   transition: transform 0.2s ease;
-  color: white;
+  fill: #fafafa;
 }
-
 @media screen and (min-width: 768px) {
   .footer-page {
     padding: 64px 0;
