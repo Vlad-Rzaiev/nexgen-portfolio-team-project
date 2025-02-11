@@ -40,3 +40,13 @@ function openModal(modalId) {
       document.getElementById('footer-modal').style.display = 'none';
     }
   });
+document.addEventListener(
+  
+  'keydown', (event) => {
+  if (event.key === 'Escape') {
+    const modal = document.getElementById('footer-modal'); // Отримуємо модальне вікно
+    if (modal && modal.style.display === 'flex') {  // Перевіряємо, чи модальне вікно відкрите
+      modal.style.display = 'none';
+    }
+  }
+});
