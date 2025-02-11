@@ -215,9 +215,6 @@
     align-items: center;
     padding-top: 32px;
   }
-  .ac.is-active {
-    padding-bottom: 24px;
-  }
   .ac.js-enabled .faq-text {
     padding-bottom: none;
   }
@@ -256,6 +253,10 @@
   .accordion-container {
     grid-template-columns: repeat(2, 1fr);
   }
+  .accordion-item {
+    padding-bottom: 32px;
+    justify-content: center;
+  }
   .faq-icon-wrapper {
     width: 40px;
     height: 40px;
@@ -263,16 +264,19 @@
   .accordion-item:nth-child(odd) {
     border-right: 2px solid rgba(250, 250, 250, 0.2);
   }
+  .accordion-item:nth-child(odd) .faq-text {
+    margin-right: 32px;
+  }
   .accordion-item:nth-child(even) {
     padding-left: 32px;
   }
   .ac-trigger {
     max-width: 100%;
     text-align: left;
-    padding: 32px 0 42px;
+    padding-top: 32px;
   }
   .faq-text {
-    margin: 26px 0 26px;
+    margin: 11px 0 26px 6px;
   }
 
   .accordion-item:nth-child(odd) .faq-icon-wrapper {
