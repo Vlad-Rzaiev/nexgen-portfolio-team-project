@@ -1,38 +1,28 @@
-
-
-
-import Accordion from "accordion-js"; 
+import Accordion from "accordion-js";
 
 document.addEventListener("DOMContentLoaded", function () {
-
-    const existingAccordions = document.querySelectorAll(".accordion-item");
-    existingAccordions.forEach(acc => acc.classList.remove("is-active"));
-
+    // Initializing the accordion
     const accordion = new Accordion(".accordion-container", {
         duration: 800,
-        showMultiple: false,
+        showMultiple: true,
         collapse: true,
     });
 
-    const triggers = document.querySelectorAll('.ac-trigger');
+    document.querySelectorAll(".accordion-item").forEach(item => {
+        const trigger = item.querySelector(".ac-trigger");
+        const panel = item.querySelector(".ac-panel");
+        const iconWrapper = item.querySelector(".faq-icon-wrapper");
 
-    triggers.forEach((trigger) => {
-        trigger.addEventListener('click', function () {
-            const item = this.closest('.accordion-item');
-            item.classList.toggle('is-active'); 
-
-            const panel = item.querySelector('.ac-panel');
-            if (panel.style.maxHeight) {
-                panel.style.maxHeight = null; 
-                panel.style.opacity = 0; 
+        trigger.addEventListener("click", function () {
+            if (item.classList.contains("is-active")) {
+                panel.style.maxHeight = panel.scrollHeight + "px"; // add max-height for open
             } else {
-                panel.style.maxHeight = panel.scrollHeight + 'px'; 
-                panel.style.opacity = 1; 
+                panel.style.maxHeight = "0"; //Closing smoothly
             }
 
-            const iconWrapper = item.querySelector('.faq-icon-wrapper');
+            // Rotate the icon
             if (iconWrapper) {
-                iconWrapper.classList.toggle('rotate');
+                iconWrapper.classList.toggle("rotate", item.classList.contains("is-active"));
             }
         });
     });
