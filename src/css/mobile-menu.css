@@ -32,9 +32,11 @@
 
 .mobile-menu-container {
   position: relative;
-  width: 100%;
+  min-width: 320px;
+  max-width: 375px;
   height: 100%;
   padding: 30% 0 64px;
+  margin: 0 auto;
 }
 
 .mobile-menu-wrapper {
