@@ -6,7 +6,7 @@
   background-color: transparent;
   z-index: 1000;
   padding-top: 32px;
-  transition: top 0.3s ease;
+  transition: top 0.5s ease;
 }
 /* PLASHKA */
 .header-fixed {
@@ -21,7 +21,6 @@
   backdrop-filter: blur(47.900001525878906px);
   background: rgba(0, 0, 0, 0.2);
   z-index: 10000;
-  transition: background-color 0.3s ease, padding-top 0.3s ease;
   margin: 0 auto;
 }
 .menu-button {
@@ -32,6 +31,11 @@
   border: none;
   width: 28px;
   height: 28px;
+}
+
+.menu-button:hover,
+.menu-button:focus {
+  transform: scale(1.1);
 }
 
 .logo-container {

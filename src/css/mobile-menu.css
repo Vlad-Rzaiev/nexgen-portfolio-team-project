@@ -52,6 +52,11 @@
   border: none;
 }
 
+.mobile-menu-button:focus,
+.mobile-menu-button:hover {
+  transform: scale(1.1);
+}
+
 .mobile-menu-close {
   stroke: #fafafa;
 }
