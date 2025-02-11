@@ -87,7 +87,7 @@
   margin-bottom: 64px;
 }
 .btn-footer:hover {
-  background-color: #4ec12e;
+  background-color: #a5c000;
 }
 /* Стиль для валідного вводу */
 .footer-input-email:not(:placeholder-shown):valid {
