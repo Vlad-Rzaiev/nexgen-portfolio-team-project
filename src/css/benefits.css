@@ -1,11 +1,14 @@
 /* Benefits section mobile */
-
+.benefits-container {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
 .cards-benefits {
   display: flex;
   flex-direction: column;
-  margin-top: 32px;
   gap: 16px;
-  margin-bottom: 50px;
+  margin-bottom: 32px;
 }
 
 .item-benefits {
@@ -57,23 +60,31 @@
   .cards-benefits {
     flex-direction: row;
     flex-wrap: wrap;
-    margin-bottom: 82px;
+    margin-bottom: 64px;
   }
 
   .item-benefits {
-    width: calc((100% - 16px) / 2);
+    width: 334px;
   }
 }
 
 /* Benefits section desktop */
 @media only screen and (min-width: 1440px) {
-  .cards-benefits {
-    margin-top: -24px;
-    margin-left: 696px;
+  .benefits-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 412px;
   }
 
-  .benefits-link:link,
-  .benefits-link:visited {
-    margin-left: 696px;
+  .cards-benefits {
+    width: 680px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-bottom: 64px;
+  }
+
+  .item-benefits {
+    width: 332px;
   }
 }
