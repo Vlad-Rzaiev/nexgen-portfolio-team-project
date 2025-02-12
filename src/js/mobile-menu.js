@@ -27,9 +27,11 @@ function onOrder(event) {
 function onOpen(event) {
   event.preventDefault();
   mobMenu.classList.add('show');
+  document.body.style.overflow = 'hidden';
 }
 
 function onClose(event) {
   event.preventDefault();
   mobMenu.classList.remove('show');
+  document.body.style.overflow = '';
 }

@@ -38,9 +38,6 @@
   gap: 4px;
   row-gap: 8px;
   list-style: none;
-  margin-left: auto;
-  max-width: 342px;
-  min-width: 320px;
 }
 
 .hero-social-links-item {
@@ -99,9 +96,8 @@
 
   .hero-social-links-list {
     flex-wrap: nowrap;
-    justify-content: space-between;
+    justify-content: flex-end;
     gap: 8px;
-    max-width: 473px;
   }
 
   .hero-social-links-item {

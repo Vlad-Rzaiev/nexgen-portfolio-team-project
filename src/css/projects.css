@@ -20,7 +20,7 @@
   display: flex;
   flex-wrap: wrap;
   gap: 6px;
-  margin-bottom: 96px;
+  margin-bottom: 45px;
 }
 
 .tag {
@@ -47,6 +47,7 @@
 }
 
 .projects-link {
+  display: inline-block;
   padding: 13px 32px;
   font-size: 16px;
   font-weight: 500;
@@ -110,8 +111,11 @@
 .projects-btn-next:hover svg {
   fill: rgba(250, 250, 250, 0.7);
 }
-
-
+@media screen and (min-width: 375px) {
+  .projects-tags {
+    margin-bottom: 96px;
+  }
+}
 /* Talet */
 
 @media screen and (min-width: 768px) {
@@ -142,14 +146,11 @@
     object-fit: cover;
   }
 
-
   .projects-navigation {
     margin-top: 64px;
     gap: 20px;
-
   }
 }
-
 
 /* Desktop */
 
@@ -170,8 +171,6 @@
   }
 
   .projects-images {
-    flex: 1;
     padding: 120px 37px;
   }
-
 }
