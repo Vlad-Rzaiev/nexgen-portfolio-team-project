@@ -80,8 +80,8 @@
   overflow: hidden;
   text-overflow: ellipsis;
 }
-.footer-input-email,
-.footer-input-comment:focus:active {
+.footer-input-email:focus,
+.footer-input-comment:focus {
   color: var(--main-text);
   border-bottom: 1px solid rgba(250, 250, 250, 0.5);
 }
@@ -96,6 +96,7 @@
   cursor: pointer;
   margin-left: 16px;
   margin-bottom: 64px;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
 }
 .btn-footer:hover,
 .btn-footer:focus {
