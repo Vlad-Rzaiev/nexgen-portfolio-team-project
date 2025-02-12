@@ -7,13 +7,12 @@ const menuLinks = document.querySelectorAll('.mobile-menu-list a');
 const orderBtn = document.querySelector('.mobile-menu-order');
 
 menuButton.addEventListener('click', onOpen);
-
 mobMenuButton.addEventListener('click', onClose);
 
 menuLinks.forEach(link => {
   link.addEventListener('click', event => {
     handleClicks(event);
-    mobMenu.classList.remove('show');
+    onClose(event);
   });
 });
 
@@ -21,9 +20,9 @@ orderBtn.addEventListener('click', onOrder);
 
 function onOrder(event) {
   handleClicks(event);
-  mobMenu.classList.remove('show');
+  onClose(event);
 }
-  
+
 function onOpen(event) {
   event.preventDefault();
   mobMenu.classList.add('show');

@@ -5,10 +5,27 @@
         <picture class="footer-picture">
           <source
             srcset="
+              ./img/footer/webp/icon_footer@1.webp 1x,
+              ./img/footer/webp/icon_footer@2.webp 2x
+            "
+            media="(min-width: 768px)"
+            type="image/webp"
+          />
+          <source
+            srcset="
               ./img/footer/icon_footer@1.png 1x,
               ./img/footer/icon_footer@2.png 2x
             "
             media="(min-width: 768px)"
+            type="image/png"
+          />
+          <source
+            srcset="
+              ./img/footer/webp/icon_footer_mobile@1.webp 1x,
+              ./img/footer/webp/icon_footer_mobile@2.webp 2x
+            "
+            media="(max-width: 767px)"
+            type="image/webp"
           />
           <source
             srcset="
@@ -16,6 +33,7 @@
               ./img/footer/icon_footer_mobile@2.png 2x
             "
             media="(max-width: 767px)"
+            type="image/png"
           />
           <img
             class="logo-footer-img"

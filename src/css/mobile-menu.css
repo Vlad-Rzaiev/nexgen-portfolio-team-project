@@ -17,9 +17,22 @@
   transform: translateX(100%);
   transition: opacity 450ms ease, visibility 450ms ease, transform 450ms ease;
 }
+
+@supports (background-image: url(/img/mobile-menu/webp/mobile-menu@1.webp)) {
+  .mobile-menu {
+    background-image: url(/img/mobile-menu/webp/mobile-menu@1.webp);
+  }
+}
+
 @media screen and (min-resolution: 192dpi) {
-  .hero {
+  .mobile-menu {
     background-image: url(/img/mobile-menu/mobile-menu@2.png);
+  }
+
+  @supports (background-image: url(/img/mobile-menu/webp/mobile-menu@2.webp)) {
+    .mobile-menu {
+      background-image: url(/img/mobile-menu/webp/mobile-menu@2.webp);
+    }
   }
 }
 

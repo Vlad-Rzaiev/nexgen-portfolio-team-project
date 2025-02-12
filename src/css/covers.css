@@ -7,9 +7,21 @@
   background-size: cover;
 }
 
+@supports (background-image: url(/img/covers/webp/covers-bg.webp)) {
+  .covers-marquee {
+    background-image: url(/img/covers/webp/covers-bg.webp);
+  }
+}
+
 @media screen and (min-resolution: 192dpi) {
   .covers-marquee {
     background-image: url(/img/covers/covers-bg@2x.png);
+  }
+
+  @supports (background-image: url(/img/covers/webp/covers-bg@2x.webp)) {
+    .covers-marquee {
+      background-image: url(/img/covers/webp/covers-bg@2x.webp);
+    }
   }
 }
 
