@@ -1,3 +1,7 @@
+#reviews {
+  padding-bottom: 64px;
+}
+
 .reviews-title {
   margin-bottom: 32px;
 }
@@ -71,6 +75,10 @@
 }
 
 @media screen and (min-width: 768px) {
+  #reviews {
+    padding-bottom: 96px;
+  }
+
   .reviews-swiper.swiper {
     width: 704px;
   }
@@ -79,6 +87,9 @@
   }
 }
 @media screen and (min-width: 1440px) {
+  #reviews {
+    padding-bottom: 164px;
+  }
   .reviews-swiper.swiper {
     width: 1376px;
   }

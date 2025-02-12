@@ -6,8 +6,7 @@
   --main-text: #fafafa;
 }
 .footer-page {
-  display: flex;
-  padding-top: 64px;
+  padding-top: 32px;
   padding-bottom: 32px;
   flex-direction: column;
 }
@@ -223,7 +222,7 @@
 
 @media screen and (min-width: 768px) {
   .footer-page {
-    padding-top: 136px;
+    padding-top: 88px;
     padding-bottom: 169px;
   }
   .footer-container {
@@ -316,10 +315,6 @@
 }
 
 @media screen and (min-width: 1440px) {
-  .footer-page {
-    padding-top: 170px;
-  }
-
   .footer-container {
     width: 100%;
     padding-left: 196px;
