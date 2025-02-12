@@ -110,6 +110,7 @@
   margin-right: auto;
   transition: opacity 450ms ease, visibility 450ms ease,
     background-color 450ms ease;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
 }
 
 .mobile-menu-order:hover,
