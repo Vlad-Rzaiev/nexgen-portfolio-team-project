@@ -33,42 +33,38 @@
       <span class="title-footer-block">together</span>
     </h2>
     <form class="form-inf" id="form-inf">
-      <div class="form-row">
-        <div class="footer-form-email">
-          <input
-            class="footer-input-email"
-            type="text"
-            id="user-email"
-            placeholder="clients@gmail.com"
-            pattern="^\w+(.\w+)?@[a-zA-Z_]+?.[a-zA-Z]{2,3}$"
-            required
-          />
-          <div class="footer-input-message"></div>
-        </div>
+      <div class="footer-form-email">
         <input
-          class="footer-input-comment"
-          id="user-comment"
-          placeholder="comments"
+          class="footer-input-email"
+          type="text"
+          id="user-email"
+          placeholder="clients@gmail.com"
+          pattern="^\w+(.\w+)?@[a-zA-Z_]+?.[a-zA-Z]{2,3}$"
+          required
         />
+        <div class="footer-input-message"></div>
       </div>
+      <input
+        class="footer-input-comment"
+        id="user-comment"
+        placeholder="comments"
+      />
       <button class="btn-footer" type="submit" id="openModal">Send</button>
-      <div class="form-contacts">
-        <ul class="footer-contacts-list">
-          <li class="footer-item">
-            <a
-              class="footer-contacts-link footer-email"
-              href="mailto:lloydjefferson@gmail.com"
-              >lloydjefferson@gmail.com</a
-            >
-            <a
-              class="footer-contacts-link footer-phone"
-              href="tel:+3801111111111"
-              >+380 111 11 11 11</a
-            >
-          </li>
-        </ul>
-      </div>
     </form>
+    <ul class="footer-contacts-list">
+      <li class="footer-item">
+        <a
+          class="footer-contacts-link footer-email"
+          href="mailto:lloydjefferson@gmail.com"
+          >lloydjefferson@gmail.com</a
+        >
+      </li>
+      <li class="footer-item">
+        <a class="footer-contacts-link footer-phone" href="tel:+3801111111111"
+          >+380 111 11 11 11</a
+        >
+      </li>
+    </ul>
   </div>
 </footer>
 

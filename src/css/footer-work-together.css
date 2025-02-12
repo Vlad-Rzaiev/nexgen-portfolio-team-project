@@ -56,12 +56,11 @@
 }
 .form-inf {
   width: 100%;
+  margin-bottom: 64px;
 }
-.form-row {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-  margin-bottom: 32px;
+
+.footer-form-email {
+  margin-bottom: 16px;
 }
 
 .footer-input-email,
@@ -84,6 +83,9 @@
   color: var(--main-text);
   border-bottom: 1px solid rgba(250, 250, 250, 0.5);
 }
+.footer-input-comment {
+  margin-bottom: 32px;
+}
 .btn-footer {
   border-radius: 100%;
   background-color: var(--button-text);
@@ -92,9 +94,6 @@
   color: var(--main-text);
   border: none;
   font-size: 18px;
-  cursor: pointer;
-  margin-left: 16px;
-  margin-bottom: 64px;
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
 }
 .btn-footer:hover,
@@ -134,7 +133,8 @@
 /* Контакти */
 .footer-contacts-list {
   display: flex;
-  gap: 16px;
+  flex-wrap: wrap;
+  gap: 4px;
 }
 
 .footer-contacts-link {
@@ -258,15 +258,14 @@
   }
 
   .form-inf {
-    position: relative;
-
-    max-width: 622px;
-  }
-  .form-row {
     display: flex;
     flex-direction: row;
-    margin-bottom: 78px;
-    gap: 32px;
+    margin-bottom: 18px;
+  }
+
+  .footer-form-email,
+  .footer-input-comment {
+    margin-right: 32px;
   }
 
   .footer-input-email,
@@ -278,11 +277,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    position: absolute;
-    right: -64px;
-    top: -30px;
     width: 150px;
     height: 150px;
+  }
+  .footer-contacts-list {
+    gap: 8px;
   }
   .contacts-link {
     padding: 18px 32px;
@@ -328,8 +327,8 @@
     }
   }
 
-  .form-inf {
-    max-width: 812px;
+  .footer-input-comment {
+    margin-right: 86px;
   }
 
   .title-footer {
@@ -344,8 +343,5 @@
   .footer-input-comment {
     width: 390px;
     height: 44px;
-  }
-  .btn-footer {
-    right: -240px;
   }
 }

@@ -1,52 +1,64 @@
- console.log('footer')
-document.getElementById('form-inf').addEventListener('submit', function (event) {
-     event.preventDefault();
+document
+  .getElementById('form-inf')
+  .addEventListener('submit', function (event) {
+    event.preventDefault();
 
     const formData = {
       email: document.getElementById('user-email').value.trim(),
-      comment: document.getElementById('user-comment').value.trim()
+      comment: document.getElementById('user-comment').value.trim(),
     };
+
     fetch('https://portfolio-js.b.goit.study/api/requests', {
       method: 'POST',
       headers: {
-        'Content-Type': 'application/json'
+        'Content-Type': 'application/json',
       },
-      body: JSON.stringify(formData)
+      body: JSON.stringify(formData),
     })
-  
-.then(response => response.json())
-    .then(data => {
+      .then(response => response.json())
+      .then(data => {
         document.getElementById('form-inf').reset();
         openModal('footer-modal');
-    })
-    .catch(error => console.error('Error submitting form:', error));
-});
+      })
+      .catch(error => console.error('Error submitting form:', error));
+  });
+
 function openModal(modalId) {
-       const modal = document.getElementById(modalId);
+  const modal = document.getElementById(modalId);
 
- if (modal) {
-    console.log('Opening modal:', modalId);
-    modal.style.display = 'flex';  // Відкриває модальне вікно
-  } else {
-    console.error('Modal not found:', modalId);  // Якщо модального вікна немає
-  }  }
-
-  document.getElementById('close-btn').addEventListener('click', function () {
-    document.getElementById('footer-modal').style.display = 'none';
-  });
-
-  window.addEventListener('click', function (event) {
-    if (event.target.id === 'footer-modal') {
-      document.getElementById('footer-modal').style.display = 'none';
-    }
-  });
-document.addEventListener(
-  
-  'keydown', (event) => {
-  if (event.key === 'Escape') {
-    const modal = document.getElementById('footer-modal'); // Отримуємо модальне вікно
-    if (modal && modal.style.display === 'flex') {  // Перевіряємо, чи модальне вікно відкрите
-      modal.style.display = 'none';
-    }
+  if (!modal) {
+    console.error('Modal not found:', modalId);
+    return;
   }
-});
+
+  console.log('Opening modal:', modalId);
+  modal.style.display = 'flex';
+
+  document.addEventListener('keydown', handleKeydown);
+  document.addEventListener('click', handleBackdropClick);
+}
+
+function closeModal() {
+  const modal = document.getElementById('footer-modal');
+
+  if (modal) {
+    modal.style.display = 'none';
+
+    document.removeEventListener('keydown', handleKeydown);
+    document.removeEventListener('click', handleBackdropClick);
+  }
+}
+
+function handleKeydown(event) {
+  if (event.key === 'Escape') {
+    closeModal();
+  }
+}
+
+function handleBackdropClick(event) {
+  if (event.target.id === 'footer-modal') {
+    closeModal();
+  }
+}
+
+document.getElementById('close-btn').addEventListener('click', closeModal);
