@@ -1,3 +1,6 @@
+import iziToast from 'izitoast';
+import 'izitoast/dist/css/iziToast.min.css';
+
 document
   .getElementById('form-inf')
   .addEventListener('submit', function (event) {
@@ -8,6 +11,17 @@ document
       comment: document.getElementById('user-comment').value.trim(),
     };
 
+    if (formData.email === '' || formData.comment === '') {
+      iziToast.info({
+        title: 'Info',
+        message: 'Please fill in the email and comment fields',
+        position: 'center',
+        timeout: 10000,
+      });
+
+      return;
+    }
+
     fetch('https://portfolio-js.b.goit.study/api/requests', {
       method: 'POST',
       headers: {
@@ -17,22 +31,45 @@ document
     })
       .then(response => response.json())
       .then(data => {
-        document.getElementById('form-inf').reset();
-        openModal('footer-modal');
+        if (data.title && data.message) {
+          document.getElementById('form-inf').reset();
+          openModal('footer-modal');
+        } else {
+          iziToast.error({
+            title: 'Error',
+            message: 'The email must be in format test@gmail.com.',
+            position: 'center',
+            timeout: 10000,
+          });
+        }
       })
-      .catch(error => console.error('Error submitting form:', error));
+      .catch(error => {
+        iziToast.error({
+          title: 'Error',
+          message: error,
+          position: 'center',
+          timeout: 10000,
+        });
+        console.log(error);
+      });
   });
 
 function openModal(modalId) {
   const modal = document.getElementById(modalId);
 
   if (!modal) {
-    console.error('Modal not found:', modalId);
+    iziToast.error({
+      title: 'Modal not found:',
+      message: modalId,
+      position: 'center',
+      timeout: 10000,
+    });
+
     return;
   }
 
-  console.log('Opening modal:', modalId);
   modal.style.display = 'flex';
+  document.body.style.overflow = 'hidden';
 
   document.addEventListener('keydown', handleKeydown);
   document.addEventListener('click', handleBackdropClick);
@@ -43,6 +80,7 @@ function closeModal() {
 
   if (modal) {
     modal.style.display = 'none';
+    document.body.style.overflow = '';
 
     document.removeEventListener('keydown', handleKeydown);
     document.removeEventListener('click', handleBackdropClick);
