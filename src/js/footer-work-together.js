@@ -6,6 +6,9 @@ document
   .addEventListener('submit', function (event) {
     event.preventDefault();
 
+    const titleModal = document.querySelector('.title-modal');
+    const textModal = document.querySelector('.text-modal');
+
     const formData = {
       email: document.getElementById('user-email').value.trim(),
       comment: document.getElementById('user-comment').value.trim(),
@@ -29,28 +32,71 @@ document
       },
       body: JSON.stringify(formData),
     })
-      .then(response => response.json())
-      .then(data => {
-        if (data.title && data.message) {
+      .then(response => {
+        return response.text().then(text => {
+          try {
+            const data = JSON.parse(text);
+            return { status: response.status, data };
+          } catch (error) {
+            return { status: response.status, data: null };
+          }
+        });
+      })
+      .then(({ status, data }) => {
+        if (status === 201) {
           document.getElementById('form-inf').reset();
           openModal('footer-modal');
-        } else {
+          titleModal.textContent = data.title;
+          textModal.textContent = data.message;
+
+          iziToast.success({
+            title: 'Success',
+            message: 'Successful operation',
+            position: 'topRight',
+            timeout: 5000,
+          });
+        } else if (status === 400) {
           iziToast.error({
             title: 'Error',
-            message: 'The email must be in format test@gmail.com.',
+            message: data.message || 'Invalid request body',
             position: 'center',
             timeout: 10000,
           });
+        } else if (status === 404) {
+          iziToast.error({
+            title: 'Error',
+            message: data.message || 'Requested resource not found.',
+            position: 'center',
+            timeout: 10000,
+          });
+        } else if (status === 500) {
+          iziToast.error({
+            title: 'Error',
+            message:
+              data.message || 'Internal server error. Please try again later.',
+            position: 'center',
+            timeout: 10000,
+          });
+        } else {
+          iziToast.error({
+            title: 'Error',
+            message: 'Unknown status. See details in console.',
+            position: 'center',
+            timeout: 10000,
+          });
+
+          console.error('Error:', status, data);
         }
       })
       .catch(error => {
+        console.error('Fetch error:', error);
+
         iziToast.error({
           title: 'Error',
-          message: error,
+          message: 'Network error or server unreachable',
           position: 'center',
           timeout: 10000,
         });
-        console.log(error);
       });
   });
 
