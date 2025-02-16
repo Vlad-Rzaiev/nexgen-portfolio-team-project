@@ -293,17 +293,19 @@
   .form-inf {
     display: flex;
     flex-direction: row;
-    align-items: center;
     margin-bottom: 18px;
+  }
+
+  .footer-form-email {
+    transform: translateY(29%);
+  }
+  .footer-input-comment {
+    transform: translateY(88%);
   }
 
   .footer-form-email,
   .footer-input-comment {
     margin-right: 32px;
-  }
-
-  .footer-form-email {
-    margin-bottom: -5px;
   }
 
   .footer-input-comment {
